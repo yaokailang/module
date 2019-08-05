@@ -8,7 +8,13 @@ from scrapy import Request
 from scrapy.exceptions import DropItem
 from scrapy.pipelines.images import ImagesPipeline
 import scrapy
+<<<<<<< Updated upstream
 
+=======
+import pymongo
+
+#下载图片
+>>>>>>> Stashed changes
 class Spider360Pipeline(ImagesPipeline):
     def file_path(self,request,response=None,info=None):
         url = request.url
@@ -23,3 +29,19 @@ class Spider360Pipeline(ImagesPipeline):
 
     def get_media_requests(self, item, info):
         yield Request(item['url'])
+<<<<<<< Updated upstream
+=======
+
+
+#保存到数据库
+class MongodbPipelins(object):
+    def __init__(self):
+        self.client = pymongo.MongoClient('localhost')
+        self.db = self.client['example']
+        self.table = self.db['content']
+
+    def process_item(self, item, spider):
+        self.table.insert(dict(item))
+        return item
+
+>>>>>>> Stashed changes

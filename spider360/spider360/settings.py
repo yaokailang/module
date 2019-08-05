@@ -56,6 +56,10 @@ DEFAULT_REQUEST_HEADERS = {
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    'spider360.middlewares.Spider360DownloadMileware': 543,
+<<<<<<< Updated upstream
+=======
+     'spider360.middlewares.AhipinSpiderMiddleware':542,
+>>>>>>> Stashed changes
 }
 
 # Enable or disable extensions
@@ -68,6 +72,10 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'spider360.pipelines.Spider360Pipeline': 300,
+<<<<<<< Updated upstream
+=======
+     'spider360.pipelines.MongodbPipelins':299,
+>>>>>>> Stashed changes
 }
 IMAGES_STORE='./imagel'
 # Enable and configure the AutoThrottle extension (disabled by default)

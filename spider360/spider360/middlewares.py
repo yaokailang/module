@@ -7,6 +7,11 @@
 
 import random
 from scrapy import signals
+<<<<<<< Updated upstream
+=======
+import json,requests
+import datetime
+>>>>>>> Stashed changes
 
 class Spider360DownloadMileware(object):
     USER_AGENTS = [
@@ -25,3 +30,32 @@ class Spider360DownloadMileware(object):
     def process_request(self, request, spider):
         user_agent = random.choice(self.USER_AGENTS)
         request.headers['User-Agent'] = user_agent
+<<<<<<< Updated upstream
+=======
+
+#设置代理
+class AhipinSpiderMiddleware(object):
+    def __init__(self):
+        self.url = 'http://dev.kdlapi.com/api/getproxy/?orderid=956475957589681&num=1&protocol=1&method=2&an_an=1&an_ha=1&quality=1&format=json&sep=1'
+        self.proxy = ''
+        self.expire_datetime = datetime.datetime.now() - datetime.timedelta(seconds=30)
+        #self._get_proxy()
+
+    def _get_proxyip(self):
+        resp = requests.get(self.url)
+        info = json.loads(resp.text)
+        proxy_list = info['data']['proxy_list']
+        proxyy = str(proxy_list)
+        proxy = 'http://'+proxyy[2:-2]
+        self.proxy = proxy
+        self.expire_datetime = datetime.datetime.now() + datetime.timedelta(seconds=20)
+
+    def _check_expire(self):
+        if datetime.datetime.now() >= self.expire_datetime:
+            self._get_proxyip()
+            print('************************\n','切换代理:',self.proxy)
+
+    def process_request(self,spider,request):
+        self._check_expire()
+        request.meta['proxy'] = self.proxy
+>>>>>>> Stashed changes

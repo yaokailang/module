@@ -14,6 +14,8 @@ BOT_NAME = 'doubandushu'
 SPIDER_MODULES = ['doubandushu.spiders']
 NEWSPIDER_MODULE = 'doubandushu.spiders'
 
+LOG_LEVEL='DEBUG'
+LOG_FILE='log.txt'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'doubandushu (+http://www.yourdomain.com)'
@@ -48,22 +50,16 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-SPIDER_MIDDLEWARES = {
+# SPIDER_MIDDLEWARES = {
+#
+#     'doubandushu.middlewares.DoubandushuDownloadMileware': 543,
+# }
 
-    'doubandushu.middlewares.DoubandushuDownloadMileware': 543,
-}
-#IP代理池
-IPPOOL=[
-     {"ipaddr" : "114.234.83.42"},
-     {"ipaddr" : "114.235.23.100"},
-     {"ipaddr" : "14.29.232.100"},
-     {"ipaddr" : "117.91.131.225"},
-     {"ipaddr" : "59.62.26.111"},
-]
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    'doubandushu.middlewares.DlSpiderMiddleware': 126,
+    'doubandushu.middlewares.DoubandushuDownloadMileware': 126,
+     'doubandushu.middlewares.AhipinSpiderMiddleware':125,
 
 }
 
@@ -77,7 +73,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'doubandushu.pipelines.JsonPipeline': 300,
-     #'doubandushu.pipelines.DoubandushuPipeline':299,
+     'doubandushu.pipelines.MongodbPipelins':300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

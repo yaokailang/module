@@ -13,17 +13,8 @@ BOT_NAME = 'boss'
 
 SPIDER_MODULES = ['boss.spiders']
 NEWSPIDER_MODULE = 'boss.spiders'
-#LOG_LEVEL='DEBUG'
-#LOG_FILE='log.txt'
-IPPOOL=[
-     {"ipaddr":"124.172.117.189:80"},
-     {"ipaddr":"219.133.31.120:8888"},
-     {"ipaddr":"183.237.194.145:8080"},
-     {"ipaddr":"183.62.172.50:9999"},
-     {"ipaddr":"163.125.157.243:8888"},
-     {"ipaddr":"183.57.42.79:81"},
-     {"ipaddr":"202.103.150.70:8088"},
-]
+LOG_LEVEL='DEBUG'
+LOG_FILE='log.txt'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'boss (+http://www.yourdomain.com)'

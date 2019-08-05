@@ -5,25 +5,18 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import json
-import pymysql
+import pymongo
 
+#保存到数据库
+class MongodbPipelins(object):
+    def __init__(self):
+        self.client = pymongo.MongoClient('localhost')
+        self.db = self.client['example']
+        self.table = self.db['dbds']
 
-#保存的Mysql数据库中
-# class DoubandushuPipeline(object):
-#     def __init__(self):
-#         self.conn = pymysql.connect('127.0.0.1', 'root', '19990811',
-#                                   'douban', 3306, charset = 'utf8')
-#         self.curspr = self.conn.cursor()
-#
-#     def process_item(self, item, spider):
-#         insert_sql = 'insert into duoban(title, url, grade, author, brief)' \
-#                      'valuse (%s, %s, %s, %s, %s)'
-#         self.curspr.execute(insert_sql, (item['title'], item['url'],item['grade'],
-#                                           item['author'], item['brief']))
-#
-#     def close_spider(self,spider):
-#         self.curspr.close()
-#         self.conn.close()
+    def process_item(self, item, spider):
+        self.table.insert(dict(item))
+        return item
 
 #保存为json文件
 class JsonPipeline(object):

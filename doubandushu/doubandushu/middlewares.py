@@ -4,20 +4,9 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-
-from scrapy import signals
+import json,requests
+import datetime
 import random
-from .settings import IPPOOL
-
-#设置代理
-class DlSpiderMiddleware(object):
-    def __init__(self, ip=''):
-        self.ip = ip
-
-    def process_request(self, request, spider):
-        thisip = random.choice(IPPOOL)
-        print("this is ip:" + thisip["ipaddr"])
-        request.meta["proxy"] = "http://" + thisip["ipaddr"]
 
 #随机请求头
 class DoubandushuDownloadMileware(object):
@@ -37,3 +26,30 @@ class DoubandushuDownloadMileware(object):
     def process_request(self, request, spider):
         user_agent = random.choice(self.USER_AGENTS)
         request.headers['User-Agent'] = user_agent
+
+
+#设置代理
+class AhipinSpiderMiddleware(object):
+    def __init__(self):
+        self.url = 'http://dev.kdlapi.com/api/getproxy/?orderid=956475957589681&num=1&protocol=1&method=2&an_an=1&an_ha=1&quality=1&format=json&sep=1'
+        self.proxy = ''
+        self.expire_datetime = datetime.datetime.now() - datetime.timedelta(seconds=30)
+        #self._get_proxy()
+
+    def _get_proxyip(self):
+        resp = requests.get(self.url)
+        info = json.loads(resp.text)
+        proxy_list = info['data']['proxy_list']
+        proxyy = str(proxy_list)
+        proxy = 'http://'+proxyy[2:-2]
+        self.proxy = proxy
+        self.expire_datetime = datetime.datetime.now() + datetime.timedelta(seconds=20)
+
+    def _check_expire(self):
+        if datetime.datetime.now() >= self.expire_datetime:
+            self._get_proxyip()
+            print('************************\n','切换代理:',self.proxy)
+
+    def process_request(self,spider,request):
+        self._check_expire()
+        request.meta['proxy'] = self.proxy
