@@ -31,7 +31,8 @@ class DoubandushuDownloadMileware(object):
 #设置代理
 class AhipinSpiderMiddleware(object):
     def __init__(self):
-        self.url = 'http://dev.kdlapi.com/api/getproxy/?orderid=956475957589681&num=1&protocol=1&method=2&an_an=1&an_ha=1&quality=1&format=json&sep=1'
+        url = 'http://dev.kdlapi.com/api/getproxy/?orderid=956475957589681&num=1&protocol=1&method=2&an_an=1&an_ha=1&quality=1&format=json&sep=1'
+        self.url = url
         self.proxy = ''
         self.expire_datetime = datetime.datetime.now() - datetime.timedelta(seconds=30)
         #self._get_proxy()

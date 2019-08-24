@@ -1,0 +1,1622 @@
+2019-08-24 21:02:24 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: doubandushu)
+2019-08-24 21:02:24 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.16299-SP0
+2019-08-24 21:02:24 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'doubandushu', 'LOG_FILE': 'log.txt', 'NEWSPIDER_MODULE': 'doubandushu.spiders', 'SPIDER_MODULES': ['doubandushu.spiders']}
+2019-08-24 21:02:24 [scrapy.extensions.telnet] INFO: Telnet Password: bc673dd1a6f9d314
+2019-08-24 21:02:24 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-24 21:02:25 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-08-24 21:02:25 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\scrapy\utils\misc.py", line 47, in load_object
+    obj = getattr(mod, name)
+AttributeError: module 'doubandushu.middlewares' has no attribute 'AhipinSpiderMiddleware'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "D:\python\lib\site-packages\scrapy\crawler.py", line 80, in crawl
+    self.engine = self._create_engine()
+  File "D:\python\lib\site-packages\scrapy\crawler.py", line 105, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "D:\python\lib\site-packages\scrapy\core\engine.py", line 69, in __init__
+    self.downloader = downloader_cls(crawler)
+  File "D:\python\lib\site-packages\scrapy\core\downloader\__init__.py", line 88, in __init__
+    self.middleware = DownloaderMiddlewareManager.from_crawler(crawler)
+  File "D:\python\lib\site-packages\scrapy\middleware.py", line 53, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "D:\python\lib\site-packages\scrapy\middleware.py", line 34, in from_settings
+    mwcls = load_object(clspath)
+  File "D:\python\lib\site-packages\scrapy\utils\misc.py", line 49, in load_object
+    raise NameError("Module '%s' doesn't define any object named '%s'" % (module, name))
+NameError: Module 'doubandushu.middlewares' doesn't define any object named 'AhipinSpiderMiddleware'
+2019-08-24 21:02:59 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: doubandushu)
+2019-08-24 21:02:59 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.16299-SP0
+2019-08-24 21:02:59 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'doubandushu', 'LOG_FILE': 'log.txt', 'NEWSPIDER_MODULE': 'doubandushu.spiders', 'SPIDER_MODULES': ['doubandushu.spiders']}
+2019-08-24 21:03:00 [scrapy.extensions.telnet] INFO: Telnet Password: da8aa8bfe37ac2be
+2019-08-24 21:03:00 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-24 21:03:00 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['doubandushu.middlewares.DoubandushuDownloadMileware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-24 21:03:00 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-24 21:03:01 [scrapy.middleware] INFO: Enabled item pipelines:
+['doubandushu.pipelines.JsonPipeline', 'doubandushu.pipelines.MongodbPipelins']
+2019-08-24 21:03:01 [scrapy.core.engine] INFO: Spider opened
+2019-08-24 21:03:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-24 21:03:01 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-24 21:03:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all> (referer: None)
+2019-08-24 21:03:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:02 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2019-08-24 21:03:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%BA%A6%E8%88%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%B8%89%E6%AF%9B> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%AD%A6%E4%BE%A0> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E5%A5%87%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A7%91%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%82%AC%E7%96%91> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%A8%80%E6%83%85> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A8%8B%E5%BA%8F> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%9D%92%E6%98%A5> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%97%A5%E6%9C%AC%E6%BC%AB%E7%94%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/5375614/> (referer: https://book.douban.com/tag/%E4%B8%89%E6%AF%9B)
+2019-08-24 21:03:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/5375614/>
+{'author': None,
+ 'brief': None,
+ 'grade': ' 9.6 ',
+ 'title': '三毛散文全编',
+ 'url': 'https://book.douban.com/subject/5375614/'}
+2019-08-24 21:03:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2137632/> (referer: https://book.douban.com/tag/%E4%B8%89%E6%AF%9B)
+2019-08-24 21:03:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/2137632/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>天堂之鸟2007/05/02 06:20 '
+          'P.M.这是一本薄薄的三毛摄影诗歌集。由成都科技大学出版社出版。买的时候，就惊讶于书名-----《天堂之鸟》,那一定是只无忧无虑、自由自在、可喜又可爱的鸟。事实是，这种欣悦的感觉总不能替代我对三毛英年早逝的惋惜。 '
+          '这本书是根据一九九O年九月二日，三毛在成都游历时的生活情景而成的摄影诗歌集，图片由著名青年摄影家肖全先生拍摄。在三毛那些精致的小诗和美文的后面，都配以一张三毛在成都时的黑白照片，让人很直观地看到三毛生前的种种情态。或开怀一笑，或低头沉思，或恋恋于成都的老茶馆，或僻静的街角聆听喧闹的市声。一个古典情怀、鲜明开朗个性的三毛便跃然纸上。三毛游览成都时，一定也是怀着颗恋恋不舍的心情驻足在老成都的每一条小巷、每一棟旧房子跟前的，然后把自己的影像牢牢地和老成都的老街、老树融合在一起。那次成都之行，三毛只住了两天...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade': ' 9.0 ',
+ 'title': '天堂之鸟',
+ 'url': 'https://book.douban.com/subject/2137632/'}
+2019-08-24 21:03:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27070071/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:03:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27070071/>
+{'author': '\n                [日]\n            米泽穗信',
+ 'brief': '<div class="intro">\n'
+          '    <p>“冰菓”系列第六弹——《迟来的翅膀》登场！</p>    <p>长大成人的路上，谁都有必须面对的谜团。</p>    '
+          '<p>神山市即将举行合唱祭，开演前负责独唱的千反田爱瑠却去向不明。折木奉太郎从暑假开始前爱瑠的状态、伊原摩耶花和福部里志的调查与证言、参赛曲目以及某个人的谎言中找到线索，独自前去寻找爱瑠。爱瑠究竟身在何处，她的真正想法又是什么呢？（《迟来的翅膀》）</p>    '
+          '<p>全书分为六个短篇，在充满活力又带点苦涩的故事里，古籍研究社四名成员的过去和未来也逐渐明朗……</p>    '
+          '<p></p></div>',
+ 'grade': ' 8.6 ',
+ 'title': '迟来的翅膀',
+ 'url': 'https://book.douban.com/subject/27070071/'}
+2019-08-24 21:03:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1013801/> (referer: https://book.douban.com/tag/%E4%B8%89%E6%AF%9B)
+2019-08-24 21:03:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/1013801/>
+{'author': '\n            三毛',
+ 'brief': '<div class="intro">\n'
+          '    <p>张爱玲的倾城之恋发生在香港，三毛的倾城之恋在东柏林---</p>    '
+          '<p>“那时的我，是一个美丽的女人，我知道，我笑，便如春花，必能感动人的----任他是谁。”</p>    '
+          '<p>穿越时空，我们分享三毛生命种一段既美丽凄楚又仿若迁世记忆的情愁...</p></div>',
+ 'grade': ' 8.8 ',
+ 'title': '倾城',
+ 'url': 'https://book.douban.com/subject/1013801/'}
+2019-08-24 21:03:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27068338/> (referer: https://book.douban.com/tag/%E7%A7%91%E5%B9%BB)
+2019-08-24 21:03:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27068338/>
+{'author': '漫娱·安德系列',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>开启了“安东的钥匙”的豆子，逐步走向生命的终点。可他的三个孩子安德、卡洛塔和辛辛纳图斯应该拥有更美好的明天。于是，巨人接受了又一项任务——余生在星际航行中度过，致力于基因研究，拯救人类物种的变种——他们自己。</p>    '
+          '<p>直到有一天，他们和另一艘巨大的外星飞船同时出现在一颗行星轨道上。</p>    <p>是虫族，还是其他外星侵略者？</p>    '
+          '<p>豆子和他的孩子们能否度过这次危机，从而获得新生？</p></div>',
+ 'grade': ' 7.2 ',
+ 'title': '飞行中的阴影',
+ 'url': 'https://book.douban.com/subject/27068338/'}
+2019-08-24 21:03:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/20449829/> (referer: https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE)
+2019-08-24 21:03:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27042830/> (referer: https://book.douban.com/tag/%E6%82%AC%E7%96%91)
+2019-08-24 21:03:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3926665/> (referer: https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE)
+2019-08-24 21:03:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/20449829/>
+{'author': '\n                [日]\n            东野圭吾',
+ 'brief': '<div class="intro">\n'
+          '    <p>我看着他的背影，心中骂道：你死了算了。</p>    '
+          '<p>一场本应隆重的婚礼，却在接连的意外中戛然而止。新郎的前女友服毒自杀，新郎则在婚礼上中毒身亡。</p>    '
+          '<p>警方欲将案件定性为胁迫殉情，但加贺步步追查，确定了三名嫌疑人。他们都对新郎充满杀意，却又有无法投毒的完美证明。</p>    '
+          '<p>面对错综的毒胶囊诡计，加贺必须要让那个人坦白：“我杀了他！”</p>    '
+          '<p>-----------------------------------------------------------------------------------------</p>    '
+          '<p>东野圭吾唯一刑警探案系列，加贺探案集第5案。继《谁杀了她》之后，东野圭吾再次让读者破解谜题。嫌疑人由两个增至三个，为读者复活侦探小说的乐趣。</p>    '
+          '<p>对我来说，加贺恭一郎是绝对必要的存在。——东野圭吾</p></div>',
+ 'grade': ' 7.4 ',
+ 'title': '我杀了他',
+ 'url': 'https://book.douban.com/subject/20449829/'}
+2019-08-24 21:03:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27042830/>
+{'author': '博集天卷',
+ 'brief': '<div class="intro">\n'
+          '    <p>▶ 两个孤独少年 × 一位孤勇警探，如父如子的亲情，失而复得的挚爱，触不可及的未来</p>    '
+          '<p>▶全球销量突破3300万册，北欧悬疑小说天王尤•奈斯博《猎豹》之后再创销售奇迹。</p>    '
+          '<p>▶入围英国犯罪小说作家协会国际匕首奖决选，荣登 《纽约时报》《出版人周刊》《洛杉矶时报》畅销榜 。</p>    '
+          '<p>也许生命只教过你一件事，那就是时光无法倒流。</p>    <p></p>    '
+          '<p>哈利自我放逐到香港之后，以为从此远离警探生涯给他造成的创伤。但令人难以置信的事情发生了——曾与哈利情同父子的少年欧雷克，因涉嫌杀人而被警方逮捕。哈利无法相信欧雷克是杀人凶手，因此返回奥斯陆试图找出真凶，挑战一桩在警方看来已经罪证确凿的毒虫命案。</p>    '
+          '<p>为了拯救他誓言守护的少年，在律师汉斯和昔日旧友贝雅特的帮助下，哈利只身展开调查。然而他发现自己面对的是一个让人彻底迷失的处境。如幽灵般神秘飘忽的贩毒组织幕后首脑，渴望权力的政客，收受黑钱的警方……没人...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade': ' 8.5 ',
+ 'title': '幽灵',
+ 'url': 'https://book.douban.com/subject/27042830/'}
+2019-08-24 21:03:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/3926665/>
+{'author': '\n                [日]\n            东野圭吾',
+ 'brief': '<div class="intro">\n'
+          '    <p>东野圭吾写得最畅快的五篇小说。</p>    <p>事关科学，更关于人性。</p>    '
+          '<p>幽微的人际关系，道德挣扎。科学的分歧论争。</p>    <p>且看神探汤川学如何解决他周遭各式各样的苦恼案件。</p>    '
+          '<p>“人心也是一种科学，而且极为深奥。”连汤川学教授都烦恼的五个谜案。</p>    <p>坠楼  '
+          '是跳楼自杀还是他杀？</p>    <p>操纵  无预警发生的火灾，恩师长子为何死于非命？</p>    <p>密室  '
+          '密闭房间里房客神秘消失，封闭的密室泄露不单纯的案情……</p>    <p>指示  当科学遇上探测学，怎样看穿真相？</p>    '
+          '<p>扰乱  如何不遇到被害人就致人于死？</p></div>',
+ 'grade': ' 7.2 ',
+ 'title': '伽利略的苦恼',
+ 'url': 'https://book.douban.com/subject/3926665/'}
+2019-08-24 21:03:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/5431784/> (referer: https://book.douban.com/tag/%E6%82%AC%E7%96%91)
+2019-08-24 21:03:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/5431784/>
+{'author': '全本书店',
+ 'brief': '<div class="intro">\n'
+          '    <p>编辑推荐:</p>    <p>1995福克纳奖得主</p>    <p>占据《纽约时报》畅销榜首数月</p>    '
+          '<p>美国书商协会年度之选</p>    <p>被译成30余种文字，全球畅销500万册</p>    '
+          '<p>当代美国文学史上罕见的超级畅销获奖经典</p>    <p>全美大中学文学课堂读本，被列入大学文学课程考试大纲</p>    '
+          '<p>拥有哈罗德•布鲁姆和Cliff Notes等众多导读本</p>    '
+          '<p>恢弘精妙，融爱情、战争、历史、悬疑和成长小说于一体</p>    '
+          '<p>多次被改编成电影和舞台剧，同名电影由伊桑霍克和工藤夕贵主演</p>    <p>内容简介：</p>    '
+          '<p>一位默默无闻的美国中学教师，用十年时间写下令自己一夜成名的故事，虚构了西雅图附近一座香杉积翠，草莓遍地的海岛，一处被海水封闭的小型人世，交织上演着爱情、战争、种族歧视和悬疑谋杀案……</p>    '
+          '<p>日裔少女初枝的生活中先后到来两个男人：邻居男孩伊什梅尔是她的初恋，他们气息相通；暗恋她并*终成为她丈夫的日本同学宫本天道，他们血脉相连。珍珠港事件爆发，日美矛盾空前激化，日裔居民...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade': ' 8.4 ',
+ 'title': '雪落香杉树',
+ 'url': 'https://book.douban.com/subject/5431784/'}
+2019-08-24 21:03:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/25815831/> (referer: https://book.douban.com/tag/%E6%97%A5%E6%9C%AC%E6%BC%AB%E7%94%BB)
+2019-08-24 21:03:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1055187/> (referer: https://book.douban.com/tag/%E4%BA%A6%E8%88%92)
+2019-08-24 21:03:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/25815831/>
+{'author': '舞動青春',
+ 'brief': '<div class="intro">\n'
+          '    <p>多多良的下一位舞伴會是……？</p>    '
+          '<p>重新回歸基礎，致力於個人練習的多多良，為了參加比賽，勢必得找到一位搭檔的舞伴。</p>    '
+          '<p>同班同學緋山千夏雖然曾有跳舞經驗，卻連一起練習都不願意，多多良的舞伴人選究竟會是……？</p></div>',
+ 'grade': ' 9.4 ',
+ 'title': '舞動青春 06',
+ 'url': 'https://book.douban.com/subject/25815831/'}
+2019-08-24 21:03:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/1055187/>
+{'author': '\n                [加拿大]\n            亦舒',
+ 'brief': '<div class="intro">\n'
+          '    <p>一天早上，丈夫涓生突然提出离婚，一直满足于做一个贤妻良母的子君尤如大梦初醒。</p>    <p></p>    '
+          '<p>在以后的生活中，子君自食其力，不断战胜软弱与自卑，并友誓不再结婚。</p>    <p></p>    '
+          '<p>就在她开始适应离异后的生活并有所成就时，一位成熟的男子打破了她内心的平静……</p>    <p></p></div>',
+ 'grade': ' 8.4 ',
+ 'title': '我的前半生',
+ 'url': 'https://book.douban.com/subject/1055187/'}
+2019-08-24 21:03:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26388161/buylinks> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:03:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2073245/> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:03:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27066397/> (referer: https://book.douban.com/tag/%E6%97%A5%E6%9C%AC%E6%BC%AB%E7%94%BB)
+2019-08-24 21:03:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26388161/buylinks>
+{'author': None,
+ 'brief': None,
+ 'grade': None,
+ 'title': None,
+ 'url': 'https://book.douban.com/subject/26388161/buylinks'}
+2019-08-24 21:03:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/2073245/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>This book provides the first comprehensive treatment of '
+          'feed-forward neural networks from the perspective of statistical '
+          'pattern recognition.  After introducing the basic concepts of '
+          'pattern recognition, the book describes techniques for modelling '
+          'probability density functions, and discusses the properties and '
+          'relative merits of the multi-layer perceptron and radial basis '
+          'funct...</p><p><a href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade': ' 8.8 ',
+ 'title': 'Neural Networks for Pattern Recognition',
+ 'url': 'https://book.douban.com/subject/2073245/'}
+2019-08-24 21:03:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3705820/buylinks> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:03:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27066397/>
+{'author': 'メイドインアビス',
+ 'brief': None,
+ 'grade': ' 8.5 ',
+ 'title': 'メイドインアビス 5',
+ 'url': 'https://book.douban.com/subject/27066397/'}
+2019-08-24 21:03:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27035382/> (referer: https://book.douban.com/tag/%E6%82%AC%E7%96%91)
+2019-08-24 21:03:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/3705820/buylinks>
+{'author': None,
+ 'brief': None,
+ 'grade': None,
+ 'title': None,
+ 'url': 'https://book.douban.com/subject/3705820/buylinks'}
+2019-08-24 21:03:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27035382/>
+{'author': '七根凶简',
+ 'brief': '<div class="intro">\n'
+          '    <p>上古之时，有七则恶念，凡接触之人，总会心性突变，犯下不赦命案。</p>    '
+          '<p>老子西出函谷关时，引七则恶念于七根木简，并以凤凰鸾扣封印，从此天下太平。</p>    '
+          '<p>但谁料凶简会再次流祸世间……</p>    <p>全新修订版《渔线人偶》《仙人指路》</p>    '
+          '<p>“二十多年前，落马湖边，一家三口，四肢、躯干、还有头，都叫人穿了渔线。而案发现场，四边的墙上都砸了钉子，那些线一头连着人身子，另一头就绕在墙钉子上，把三个死人摆成了一幅场景。那些横扯竖拉的线足有上百根，乍一看像是蜘蛛网……”</p>    '
+          '<p>——选自《渔线人偶》</p>    '
+          '<p>“传说月圆之夜，老蚌会格外高兴，会随着月亮的东升西沉不断转动身体以获取月光的照耀……五珠村把这样的情景称作老蚌晒月。”</p>    '
+          '<p>“村里的人就越来越少，有一天，这老头发了魔怔，把祠堂里的祖宗牌位都抱了出来，放进采珠船，划船出海了。他说，要去跟蛟龙谈一谈，看在列祖列宗的份上，这海也不能绝了村子的路。”</p>    '
+          '<p>——选自《仙人指...</p><p><a href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade': ' 8.1 ',
+ 'title': '七根凶简',
+ 'url': 'https://book.douban.com/subject/27035382/'}
+2019-08-24 21:03:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/22933018/buylinks> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:03:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/22933018/buylinks>
+{'author': None,
+ 'brief': None,
+ 'grade': None,
+ 'title': None,
+ 'url': 'https://book.douban.com/subject/22933018/buylinks'}
+2019-08-24 21:03:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26388161/> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:03:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1873231/buylinks> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:03:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26388161/>
+{'author': None,
+ 'brief': None,
+ 'grade': ' 8.6 ',
+ 'title': 'MATLAB神经网络43个案例分析',
+ 'url': 'https://book.douban.com/subject/26388161/'}
+2019-08-24 21:03:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/1873231/buylinks>
+{'author': None,
+ 'brief': None,
+ 'grade': None,
+ 'title': None,
+ 'url': 'https://book.douban.com/subject/1873231/buylinks'}
+2019-08-24 21:03:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%9F%A9%E5%AF%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:03:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/22933018/> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:03:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/22933018/>
+{'author': '\n            天蚕土豆',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>《斗破苍穹(珍藏全集)(套装共27册)》讲述了天才少年萧炎在创造了家族空前绝后的修炼纪录后突然成了废人，整整三年时间，家族冷遇，旁人轻视，被未婚妻退婚……种种打击接踵而至。就在他即将绝望的时候，一缕幽魂从他手上的戒指里浮现，一扇全新的大门在面前开启！</p></div>',
+ 'grade': ' 6.3 ',
+ 'title': '斗破苍穹',
+ 'url': 'https://book.douban.com/subject/22933018/'}
+2019-08-24 21:03:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E5%BC%A0%E5%BB%89> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:03:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27075481/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:03:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27075481/>
+{'author': '\n            墨香铜臭',
+ 'brief': '<div class="intro">\n'
+          '    <p>隨書附贈精美明信片一張</p>    <p>從幻花宮水牢逃離的沈清秋，在花月城暴露了行蹤。</p>    '
+          '<p>陽光下，屋簷上，眼前是滿眼陰沉的洛冰河。</p>    <p>而為了不讓洛冰河被心魔劍反噬，沈清秋選擇了斷一切，</p>    '
+          '<p>昔年將他打下深淵，今日就為他墜下高樓。</p>    <p>「還未請教閣下仙號？」「絕世黃瓜。」</p>    '
+          '<p>花月城裡一招金蟬脫殼，</p>    <p>讓沈清秋以為自己順利擺脫了那個坑爹系統，</p>    '
+          '<p>原想前塵往事隨風去，</p>    <p>自此用這縱橫書評區多年的ID行走江湖，</p>    '
+          '<p>豈料全新生活還未開始，他已再度遇上昔日舊人。</p>    <p>原本只是想救出被紗華鈴抓住的人肉引子們，</p>    '
+          '<p>卻不想正巧碰上前來此處的洛冰河。</p>    <p>【……啟動……啟動……靈魂綁定……】</p>    '
+          '<p>遇到洛冰河後，系統……竟再次啟動了！</p>    <p>洛冰河真是他命中魔星！</p></div>',
+ 'grade': ' 7.5 ',
+ 'title': '人渣反派自救系統 中',
+ 'url': 'https://book.douban.com/subject/27075481/'}
+2019-08-24 21:03:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%8E%84%E5%B9%BB> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:03:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1873231/> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:03:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/1873231/>
+{'author': '\n            当年明月',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>从朱元璋的出身开始写起，到永乐大帝夺位的靖难之役结束为止。叙述了明朝最艰苦卓绝的开国过程。朱元璋pk陈友谅，谁堪问鼎天下？战太平、太湖大决战。卧榻之侧埋恶虎，铲除张士诚。徐达、常遇春等不世名将乘胜逐北破北元。更有明朝最大的谜团——永乐夺位、建文失踪的靖难之役。</p></div>',
+ 'grade': ' 8.7 ',
+ 'title': '明朝那些事儿（壹）',
+ 'url': 'https://book.douban.com/subject/1873231/'}
+2019-08-24 21:03:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3705820/> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:03:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%8C%AB%E8%85%BB> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:13:59 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: doubandushu)
+2019-08-24 21:13:59 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.16299-SP0
+2019-08-24 21:13:59 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'doubandushu', 'LOG_FILE': 'log.txt', 'NEWSPIDER_MODULE': 'doubandushu.spiders', 'SPIDER_MODULES': ['doubandushu.spiders']}
+2019-08-24 21:14:00 [scrapy.extensions.telnet] INFO: Telnet Password: 18f404f7d7d6153e
+2019-08-24 21:14:00 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-24 21:14:01 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['doubandushu.middlewares.DoubandushuDownloadMileware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-24 21:14:01 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-24 21:14:02 [scrapy.middleware] INFO: Enabled item pipelines:
+['doubandushu.pipelines.JsonPipeline', 'doubandushu.pipelines.MongodbPipelins']
+2019-08-24 21:14:02 [scrapy.core.engine] INFO: Spider opened
+2019-08-24 21:14:02 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-24 21:14:02 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-24 21:14:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all> (referer: None)
+2019-08-24 21:14:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:03 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2019-08-24 21:14:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%A8%80%E6%83%85> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E5%A5%87%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%AD%A6%E4%BE%A0> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A7%91%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%9D%92%E6%98%A5> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%BB%98%E6%9C%AC> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%B8%AF%E5%8F%B0> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%82%AC%E7%96%91> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%9D%9C%E6%8B%89%E6%96%AF> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A8%8B%E5%BA%8F> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%97%A5%E6%9C%AC%E6%BC%AB%E7%94%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%BC%AB%E7%94%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%B1%B3%E5%85%B0%C2%B7%E6%98%86%E5%BE%B7%E6%8B%89> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27068338/> (referer: https://book.douban.com/tag/%E7%A7%91%E5%B9%BB)
+2019-08-24 21:14:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27068338/>
+{'author': '漫娱·安德系列',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>开启了“安东的钥匙”的豆子，逐步走向生命的终点。可他的三个孩子安德、卡洛塔和辛辛纳图斯应该拥有更美好的明天。于是，巨人接受了又一项任务——余生在星际航行中度过，致力于基因研究，拯救人类物种的变种——他们自己。</p>    '
+          '<p>直到有一天，他们和另一艘巨大的外星飞船同时出现在一颗行星轨道上。</p>    <p>是虫族，还是其他外星侵略者？</p>    '
+          '<p>豆子和他的孩子们能否度过这次危机，从而获得新生？</p></div>',
+ 'grade': ' 7.2 ',
+ 'title': '飞行中的阴影',
+ 'url': 'https://book.douban.com/subject/27068338/'}
+2019-08-24 21:14:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27078239/> (referer: https://book.douban.com/tag/%E7%A7%91%E5%B9%BB)
+2019-08-24 21:14:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27078239/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>本书故事背景设定在未来发生的一些列奇案，而在高科技的外衣下，这些案件的本质还在于逻辑，推理，人心……</p>    '
+          '<p>一、造物主。一场人为设计的车祸，如何骗过“天眼”系统的监控。特一科警员牺牲的背后又隐藏着怎样的线索。科技可以操控万物，轻松毁灭任何东西，但却永远无法改变人心。</p>    '
+          '<p>二、蚁人。四位被害人死状凄惨，凶手是基因变异的行军蚁、子弹蚁、马塔贝勒蚁，十几年前的秘密被揭开，一个本已死去的人为复仇归来，这是一个因悲剧而引发的悲剧，当爱恨已成往事……</p>    '
+          '<p>三、机械杀戮。连环杀人案，死者都是孤寡老人，案发现场只有记忆空白的机器人管家，机器人真的会杀人么？有时候，人心比机器更冰冷……</p>    '
+          '<p>四、造梦者。史前动物园剑齿虎口下发现“人腿”，是什么样的凶手能翻过三米的高墙，在水泥地留下深深的足迹？造梦装置、催眠、未知病毒……如果梦想的实现需要生命做代价，那……</p></div>',
+ 'grade': ' 8.0 ',
+ 'title': '未来犯罪',
+ 'url': 'https://book.douban.com/subject/27078239/'}
+2019-08-24 21:14:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26695255/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 21:14:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3926665/> (referer: https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE)
+2019-08-24 21:14:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27063968/> (referer: https://book.douban.com/tag/%E7%A7%91%E5%B9%BB)
+2019-08-24 21:14:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26695255/>
+{'author': '\n            墨宝非宝',
+ 'brief': '<div class="intro">\n'
+          '    <p>身为翻唱界的软萌小天后，佟年从来没想到她会对一个人一见钟情。</p>    '
+          '<p>她以为她追的是个三次元帅哥，不想，此人却是电竞圈的远古传说。</p>    '
+          '<p>“韩商言”，她微微仰着头，“我喜欢你。”</p>    <p>喜欢到恨不得一天有二十五个小时能和你在一起，</p>    '
+          '<p>就黏着你，看你生气，看你笑，看你发脾气，看你认真工作……</p>    '
+          '<p>他用几乎不能听到的声音，回答她：“听到了。”</p>    '
+          '<p>佟年，你有多想得到我，我就有多想要你。除了你，谁都不行。</p>    '
+          '<p>我韩商言从来不是个外露的人，感情都在心里，浪漫什么的，不需要。</p>    <p>一辈子那么长，我都给你。</p></div>',
+ 'grade': ' 5.9 ',
+ 'title': '蜜汁炖鱿鱼',
+ 'url': 'https://book.douban.com/subject/26695255/'}
+2019-08-24 21:14:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26971240/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86)
+2019-08-24 21:14:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/3926665/>
+{'author': '\n                [日]\n            东野圭吾',
+ 'brief': '<div class="intro">\n'
+          '    <p>东野圭吾写得最畅快的五篇小说。</p>    <p>事关科学，更关于人性。</p>    '
+          '<p>幽微的人际关系，道德挣扎。科学的分歧论争。</p>    <p>且看神探汤川学如何解决他周遭各式各样的苦恼案件。</p>    '
+          '<p>“人心也是一种科学，而且极为深奥。”连汤川学教授都烦恼的五个谜案。</p>    <p>坠楼  '
+          '是跳楼自杀还是他杀？</p>    <p>操纵  无预警发生的火灾，恩师长子为何死于非命？</p>    <p>密室  '
+          '密闭房间里房客神秘消失，封闭的密室泄露不单纯的案情……</p>    <p>指示  当科学遇上探测学，怎样看穿真相？</p>    '
+          '<p>扰乱  如何不遇到被害人就致人于死？</p></div>',
+ 'grade': ' 7.2 ',
+ 'title': '伽利略的苦恼',
+ 'url': 'https://book.douban.com/subject/3926665/'}
+2019-08-24 21:14:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27063968/>
+{'author': '幻象文库',
+ 'brief': '<div class="intro">\n'
+          '    <p>殿堂级科幻电影大师雷德利·斯科特沉寂五年，异形系列前传二度归来！</p>    '
+          '<p>奥斯卡影帝法斯宾德再度化身生化人！</p>    <p>同名电影登顶全球票房，国内火爆上映！</p>    '
+          '<p>殖民飞船“契约号”的船员来到银河系尽头的一颗遥远星球，原以为那里是片伊甸处女地，实际上却是一个黑暗的危险世界。当超出想象的威胁来袭时，唯有亡命奔逃，才是*的出路。</p></div>',
+ 'grade': ' 8.0 ',
+ 'title': '异形：契约',
+ 'url': 'https://book.douban.com/subject/27063968/'}
+2019-08-24 21:14:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/20449829/> (referer: https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE)
+2019-08-24 21:14:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26971240/>
+{'author': '尸案调查科系列',
+ 'brief': '<div class="intro">\n'
+          '    <p>本书是一本犯罪推理小说。讲述市公安局刑事技术室的几名技术警察如何运用刑事科学技术侦破重大疑难案件的故事。</p>    '
+          '<p>七个烧脑的谋杀故事，七段黑暗的死亡回忆！</p>    <p>威廉古堡：一家三口惨死豪华别墅浴缸之中……</p>    '
+          '<p>封尘木偶：不明身份的尸块散落于荒山野岭……</p>    <p>花季江湖：人缘很好的留守老人莫名死于小卖店……</p>    '
+          '<p>绝命轮回：夫妻吵架，妻子愤然离开，从此再也没有回来……</p>    '
+          '<p>粉红女郎：“蜜恋“主题青年酒店发现一具50岁中年男人尸体……</p>    '
+          '<p>爱之誓言：房东寡妇潘蓉发现房客死于自己出租的房子里……</p></div>',
+ 'grade': ' 6.9 ',
+ 'title': '尸案调查科第二季1：罪恶根源',
+ 'url': 'https://book.douban.com/subject/26971240/'}
+2019-08-24 21:14:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/20449829/>
+{'author': '\n                [日]\n            东野圭吾',
+ 'brief': '<div class="intro">\n'
+          '    <p>我看着他的背影，心中骂道：你死了算了。</p>    '
+          '<p>一场本应隆重的婚礼，却在接连的意外中戛然而止。新郎的前女友服毒自杀，新郎则在婚礼上中毒身亡。</p>    '
+          '<p>警方欲将案件定性为胁迫殉情，但加贺步步追查，确定了三名嫌疑人。他们都对新郎充满杀意，却又有无法投毒的完美证明。</p>    '
+          '<p>面对错综的毒胶囊诡计，加贺必须要让那个人坦白：“我杀了他！”</p>    '
+          '<p>-----------------------------------------------------------------------------------------</p>    '
+          '<p>东野圭吾唯一刑警探案系列，加贺探案集第5案。继《谁杀了她》之后，东野圭吾再次让读者破解谜题。嫌疑人由两个增至三个，为读者复活侦探小说的乐趣。</p>    '
+          '<p>对我来说，加贺恭一郎是绝对必要的存在。——东野圭吾</p></div>',
+ 'grade': ' 7.4 ',
+ 'title': '我杀了他',
+ 'url': 'https://book.douban.com/subject/20449829/'}
+2019-08-24 21:14:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26388161/buylinks> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:14:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26388161/buylinks>
+{'author': None,
+ 'brief': None,
+ 'grade': None,
+ 'title': None,
+ 'url': 'https://book.douban.com/subject/26388161/buylinks'}
+2019-08-24 21:14:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/20473089/> (referer: https://book.douban.com/tag/%E5%A5%87%E5%B9%BB)
+2019-08-24 21:14:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2073245/> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:14:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/20473089/>
+{'author': '\n                [日]\n            森见登美彦',
+ 'brief': '<div class="intro">\n'
+          '    <p>下鸭家是京都狸猫的名门，却没有望族该有的正经相。</p>    '
+          '<p>能干的老爸撒手西去，留下热衷桌球畏惧雷电的母亲和四只小狸。</p>    <p>老大矢一郎一到紧要关头就失措；</p>    '
+          '<p>老二变身青蛙滞留井底；</p>    <p>老三热衷于恶作剧；</p>    <p>老幺变身时容易露出狸猫尾巴。</p>    '
+          '<p>四兄弟夹在天狗和人类之间，想安度狸猫的一生，</p>    <p>既是亲戚又是死对头的金阁、银阁兄弟却屡屡作梗，</p>    '
+          '<p>流淌着傻瓜血脉的下鸭一家该如何是好……</p></div>',
+ 'grade': ' 8.6 ',
+ 'title': '有顶天家族',
+ 'url': 'https://book.douban.com/subject/20473089/'}
+2019-08-24 21:14:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/2073245/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>This book provides the first comprehensive treatment of '
+          'feed-forward neural networks from the perspective of statistical '
+          'pattern recognition.  After introducing the basic concepts of '
+          'pattern recognition, the book describes techniques for modelling '
+          'probability density functions, and discusses the properties and '
+          'relative merits of the multi-layer perceptron and radial basis '
+          'funct...</p><p><a href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade': ' 8.8 ',
+ 'title': 'Neural Networks for Pattern Recognition',
+ 'url': 'https://book.douban.com/subject/2073245/'}
+2019-08-24 21:14:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26388161/> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:14:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27035382/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86)
+2019-08-24 21:14:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26388161/>
+{'author': None,
+ 'brief': None,
+ 'grade': ' 8.6 ',
+ 'title': 'MATLAB神经网络43个案例分析',
+ 'url': 'https://book.douban.com/subject/26388161/'}
+2019-08-24 21:14:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27035382/>
+{'author': '七根凶简',
+ 'brief': '<div class="intro">\n'
+          '    <p>上古之时，有七则恶念，凡接触之人，总会心性突变，犯下不赦命案。</p>    '
+          '<p>老子西出函谷关时，引七则恶念于七根木简，并以凤凰鸾扣封印，从此天下太平。</p>    '
+          '<p>但谁料凶简会再次流祸世间……</p>    <p>全新修订版《渔线人偶》《仙人指路》</p>    '
+          '<p>“二十多年前，落马湖边，一家三口，四肢、躯干、还有头，都叫人穿了渔线。而案发现场，四边的墙上都砸了钉子，那些线一头连着人身子，另一头就绕在墙钉子上，把三个死人摆成了一幅场景。那些横扯竖拉的线足有上百根，乍一看像是蜘蛛网……”</p>    '
+          '<p>——选自《渔线人偶》</p>    '
+          '<p>“传说月圆之夜，老蚌会格外高兴，会随着月亮的东升西沉不断转动身体以获取月光的照耀……五珠村把这样的情景称作老蚌晒月。”</p>    '
+          '<p>“村里的人就越来越少，有一天，这老头发了魔怔，把祠堂里的祖宗牌位都抱了出来，放进采珠船，划船出海了。他说，要去跟蛟龙谈一谈，看在列祖列宗的份上，这海也不能绝了村子的路。”</p>    '
+          '<p>——选自《仙人指...</p><p><a href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade': ' 8.1 ',
+ 'title': '七根凶简',
+ 'url': 'https://book.douban.com/subject/27035382/'}
+2019-08-24 21:14:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/25900368/buylinks> (referer: https://book.douban.com/tag/%E7%B1%B3%E5%85%B0%C2%B7%E6%98%86%E5%BE%B7%E6%8B%89)
+2019-08-24 21:14:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/25900368/buylinks>
+{'author': None,
+ 'brief': None,
+ 'grade': None,
+ 'title': None,
+ 'url': 'https://book.douban.com/subject/25900368/buylinks'}
+2019-08-24 21:14:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/MargueriteDuras> (referer: https://book.douban.com/tag/%E6%9D%9C%E6%8B%89%E6%96%AF)
+2019-08-24 21:14:35 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: doubandushu)
+2019-08-24 21:14:35 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.16299-SP0
+2019-08-24 21:14:35 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'doubandushu', 'LOG_FILE': 'log.txt', 'NEWSPIDER_MODULE': 'doubandushu.spiders', 'SPIDER_MODULES': ['doubandushu.spiders']}
+2019-08-24 21:14:35 [scrapy.extensions.telnet] INFO: Telnet Password: 554bc89148d19b60
+2019-08-24 21:14:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-24 21:14:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['doubandushu.middlewares.DoubandushuDownloadMileware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-24 21:14:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-24 21:14:35 [scrapy.middleware] INFO: Enabled item pipelines:
+['doubandushu.pipelines.JsonPipeline', 'doubandushu.pipelines.MongodbPipelins']
+2019-08-24 21:14:35 [scrapy.core.engine] INFO: Spider opened
+2019-08-24 21:14:35 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-24 21:14:35 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-24 21:14:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all> (referer: None)
+2019-08-24 21:14:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:37 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4#more> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2019-08-24 21:14:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%AD%A6%E4%BE%A0> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%BA%A6%E8%88%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%82%AC%E7%96%91> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A7%91%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%A8%80%E6%83%85> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%9F%A9%E5%AF%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%9D%92%E6%98%A5> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%BB%98%E6%9C%AC> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A8%8B%E5%BA%8F> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E5%A5%87%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%97%A5%E6%9C%AC%E6%BC%AB%E7%94%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27070071/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:14:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27070071/>
+{'author': '\n                [日]\n            米泽穗信',
+ 'brief': '<div class="intro">\n'
+          '    <p>“冰菓”系列第六弹——《迟来的翅膀》登场！</p>    <p>长大成人的路上，谁都有必须面对的谜团。</p>    '
+          '<p>神山市即将举行合唱祭，开演前负责独唱的千反田爱瑠却去向不明。折木奉太郎从暑假开始前爱瑠的状态、伊原摩耶花和福部里志的调查与证言、参赛曲目以及某个人的谎言中找到线索，独自前去寻找爱瑠。爱瑠究竟身在何处，她的真正想法又是什么呢？（《迟来的翅膀》）</p>    '
+          '<p>全书分为六个短篇，在充满活力又带点苦涩的故事里，古籍研究社四名成员的过去和未来也逐渐明朗……</p>    '
+          '<p></p></div>',
+ 'grade': ' 8.6 ',
+ 'title': '迟来的翅膀',
+ 'url': 'https://book.douban.com/subject/27070071/'}
+2019-08-24 21:14:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:14:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1046385/buylinks> (referer: https://book.douban.com/tag/%E9%9F%A9%E5%AF%92)
+2019-08-24 21:14:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/1046385/buylinks>
+{'author': None,
+ 'brief': None,
+ 'grade': None,
+ 'title': None,
+ 'url': 'https://book.douban.com/subject/1046385/buylinks'}
+2019-08-24 21:14:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27075479/> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:14:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27075479/>
+{'author': '\n            墨香铜臭',
+ 'brief': '<div class="intro">\n'
+          '    <p>隨書附贈精美明信片一張</p>    <p>身為《狂傲仙魔途》的資深讀者，沈垣對這篇文是大大的不滿。</p>    '
+          '<p>「傻逼作者傻逼文！」臨終前他罵了這麼一句，於是──</p>    <p>【啟動碼：傻逼作者傻逼文。自動觸發系統。】</p>    '
+          '<p>他重生到一本自己剛讀完還嫌棄過的暗黑系種馬小說了！</p>    '
+          '<p>而且天殺的，他的角色還是男主角那位人渣反派師尊沈清秋！</p>    '
+          '<p>說到沈清秋，雖然有外表、有修為，但為人還真是格外沒品。</p>    '
+          '<p>欺負打壓男主角不說，還殘害同門，道貌岸然，內心淫邪……</p>    '
+          '<p>這樣一個壞到天怒人怨的角色，在原著裡的下場當然是淒慘的，</p>    '
+          '<p>男主角洛冰河最後會把他削成人棍啊我的媽，他不想死得這麼慘啊！</p>    '
+          '<p>於是乎，新生的沈清秋開始了避免慘死結局的艱苦之路，</p>    <p>因為他要保命，但卻不能違反各種系統設定！</p>    '
+          '<p>雖然艱辛，但他要趁徒弟還是可愛小綿羊的時候就開始刷好感度，</p>    '
+          '<p>以免後期黑化的洛冰河稱霸後，會回來報復自己。</p>    <p>只是，沈清秋這好感度可能刷過頭了，</p>    '
+          '<p>他沒發...</p><p><a href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade': ' 7.4 ',
+ 'title': '人渣反派自救系統 上',
+ 'url': 'https://book.douban.com/subject/27075479/'}
+2019-08-24 21:14:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27053309/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 21:14:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27053309/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>这是一本与爱情有关的书，是作者在上本书做地面活动宣传时，很多学生和读者把自己的故事讲给代琮听的，作者之后又经过挑选、整理和杜撰后写了出来。也就是说这些都是属于读者们自己的真实故事。19个不同的故事，19个不同的人生，19种不同的爱情，有青葱少年时的苦涩暗恋，有徘徊在爱情和现实边缘的挣扎和纠结，有即便穿越人海终会彼此遇见的温暖，有过尽千帆后依然相信爱情会在不远处等待的执着与纯真。让人感同身受的那段与爱情有关的过往岁月。</p></div>',
+ 'grade': ' 7.9 ',
+ 'title': '那个送我筋斗云的美少年',
+ 'url': 'https://book.douban.com/subject/27053309/'}
+2019-08-24 21:14:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3259440/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:14:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/3259440/>
+{'author': '\n                [日]\n            东野圭吾',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>“只希望能手牵手在太阳下散步”，这个象征故事内核的绝望念想，有如一个美丽的幌子，随着无数凌乱、压抑、悲凉的故事片段像纪录片一样一一还原：没有痴痴相思，没有海枯石烂，只剩下一个冰冷绝望的诡计，最后一丝温情也被完全抛弃，万千读者在一曲救赎罪恶的凄苦爱情中悲切动容……</p></div>',
+ 'grade': ' 9.1 ',
+ 'title': '白夜行',
+ 'url': 'https://book.douban.com/subject/3259440/'}
+2019-08-24 21:14:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27075481/> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:14:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27075481/>
+{'author': '\n            墨香铜臭',
+ 'brief': '<div class="intro">\n'
+          '    <p>隨書附贈精美明信片一張</p>    <p>從幻花宮水牢逃離的沈清秋，在花月城暴露了行蹤。</p>    '
+          '<p>陽光下，屋簷上，眼前是滿眼陰沉的洛冰河。</p>    <p>而為了不讓洛冰河被心魔劍反噬，沈清秋選擇了斷一切，</p>    '
+          '<p>昔年將他打下深淵，今日就為他墜下高樓。</p>    <p>「還未請教閣下仙號？」「絕世黃瓜。」</p>    '
+          '<p>花月城裡一招金蟬脫殼，</p>    <p>讓沈清秋以為自己順利擺脫了那個坑爹系統，</p>    '
+          '<p>原想前塵往事隨風去，</p>    <p>自此用這縱橫書評區多年的ID行走江湖，</p>    '
+          '<p>豈料全新生活還未開始，他已再度遇上昔日舊人。</p>    <p>原本只是想救出被紗華鈴抓住的人肉引子們，</p>    '
+          '<p>卻不想正巧碰上前來此處的洛冰河。</p>    <p>【……啟動……啟動……靈魂綁定……】</p>    '
+          '<p>遇到洛冰河後，系統……竟再次啟動了！</p>    <p>洛冰河真是他命中魔星！</p></div>',
+ 'grade': ' 7.5 ',
+ 'title': '人渣反派自救系統 中',
+ 'url': 'https://book.douban.com/subject/27075481/'}
+2019-08-24 21:14:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2030264/buylinks> (referer: https://book.douban.com/tag/%E7%A8%8B%E5%BA%8F)
+2019-08-24 21:14:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/2030264/buylinks>
+{'author': None,
+ 'brief': None,
+ 'grade': None,
+ 'title': None,
+ 'url': 'https://book.douban.com/subject/2030264/buylinks'}
+2019-08-24 21:14:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2567698/> (referer: https://book.douban.com/tag/%E7%A7%91%E5%B9%BB)
+2019-08-24 21:14:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/2567698/>
+{'author': '\n            刘慈欣',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>文化大革命如火如荼进行的同时。军方探寻外星文明的绝秘计划“红岸工程”取得了突破性进展。但在按下发射键的那一刻，历经劫难的叶文洁没有意识到，她彻底改变了人类的命运。地球文明向宇宙发出的第一声啼鸣，以太阳为中心，以光速向宇宙深处飞驰……</p>    '
+          '<p>四光年外，“三体文明”正苦苦挣扎——三颗无规则运行的太阳主导下的百余次毁灭与重生逼迫他们逃离母星。而恰在此时。他们接收到了地球发来的信息。在运用超技术锁死地球人的基础科学之后。三体人庞大的宇宙舰队开始向地球进发……</p>    '
+          '<p>人类的末日悄然来临。</p></div>',
+ 'grade': ' 8.8 ',
+ 'title': '三体',
+ 'url': 'https://book.douban.com/subject/2567698/'}
+2019-08-24 21:46:41 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: doubandushu)
+2019-08-24 21:46:41 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.16299-SP0
+2019-08-24 21:46:41 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'doubandushu', 'LOG_FILE': 'log.txt', 'NEWSPIDER_MODULE': 'doubandushu.spiders', 'SPIDER_MODULES': ['doubandushu.spiders']}
+2019-08-24 21:46:41 [scrapy.extensions.telnet] INFO: Telnet Password: 7ac85cca21709afa
+2019-08-24 21:46:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-24 21:46:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['doubandushu.middlewares.DoubandushuDownloadMileware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-24 21:46:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-24 21:46:42 [scrapy.middleware] INFO: Enabled item pipelines:
+['doubandushu.pipelines.JsonPipeline', 'doubandushu.pipelines.MongodbPipelins']
+2019-08-24 21:46:42 [scrapy.core.engine] INFO: Spider opened
+2019-08-24 21:46:42 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-24 21:46:42 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-24 21:46:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all> (referer: None)
+2019-08-24 21:46:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:43 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2019-08-24 21:46:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E5%A5%87%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%AD%A6%E4%BE%A0> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%82%AC%E7%96%91> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A7%91%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%A8%80%E6%83%85> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%9F%A9%E5%AF%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A8%8B%E5%BA%8F> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/UCD> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%BB%98%E6%9C%AC> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%97%A5%E6%9C%AC%E6%BC%AB%E7%94%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%BA%A6%E8%88%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%9D%92%E6%98%A5> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:46:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3705820/buylinks> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:46:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26976497/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 21:46:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26976497/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>这是中国部丝路题材长篇小说的先声之作。作品讲述美丽精灵“小吃货”、哈萨克斯坦陕西村汉族少女雅诗儿及富豪男友组织车队从阿斯塔纳逆丝路一路向东，途径阿拉木图、霍尔果斯、新疆、甘肃、陕西等沿线各明珠城市和景点，一路奇遇、一路历险、一路故事，最终到达西安寻祖，却与西安青年郑能亮不可抑止地相爱，几经波折嫁回中国的故事。作品内容丰富，时尚、清新，具有浓郁的地域气息和时代风貌，是中华文化自信的见证。</p></div>',
+ 'grade_float': 9.1,
+ 'title': '丝路情缘',
+ 'url': 'https://book.douban.com/subject/26976497/'}
+2019-08-24 21:46:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/5431784/> (referer: https://book.douban.com/tag/%E6%82%AC%E7%96%91)
+2019-08-24 21:46:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2073245/> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:46:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/5431784/>
+{'author': '全本书店',
+ 'brief': '<div class="intro">\n'
+          '    <p>编辑推荐:</p>    <p>1995福克纳奖得主</p>    <p>占据《纽约时报》畅销榜首数月</p>    '
+          '<p>美国书商协会年度之选</p>    <p>被译成30余种文字，全球畅销500万册</p>    '
+          '<p>当代美国文学史上罕见的超级畅销获奖经典</p>    <p>全美大中学文学课堂读本，被列入大学文学课程考试大纲</p>    '
+          '<p>拥有哈罗德•布鲁姆和Cliff Notes等众多导读本</p>    '
+          '<p>恢弘精妙，融爱情、战争、历史、悬疑和成长小说于一体</p>    '
+          '<p>多次被改编成电影和舞台剧，同名电影由伊桑霍克和工藤夕贵主演</p>    <p>内容简介：</p>    '
+          '<p>一位默默无闻的美国中学教师，用十年时间写下令自己一夜成名的故事，虚构了西雅图附近一座香杉积翠，草莓遍地的海岛，一处被海水封闭的小型人世，交织上演着爱情、战争、种族歧视和悬疑谋杀案……</p>    '
+          '<p>日裔少女初枝的生活中先后到来两个男人：邻居男孩伊什梅尔是她的初恋，他们气息相通；暗恋她并*终成为她丈夫的日本同学宫本天道，他们血脉相连。珍珠港事件爆发，日美矛盾空前激化，日裔居民...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.4,
+ 'title': '雪落香杉树',
+ 'url': 'https://book.douban.com/subject/5431784/'}
+2019-08-24 21:46:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26388161/buylinks> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:46:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/2073245/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>This book provides the first comprehensive treatment of '
+          'feed-forward neural networks from the perspective of statistical '
+          'pattern recognition.  After introducing the basic concepts of '
+          'pattern recognition, the book describes techniques for modelling '
+          'probability density functions, and discusses the properties and '
+          'relative merits of the multi-layer perceptron and radial basis '
+          'funct...</p><p><a href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.8,
+ 'title': 'Neural Networks for Pattern Recognition',
+ 'url': 'https://book.douban.com/subject/2073245/'}
+2019-08-24 21:46:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27028847/> (referer: https://book.douban.com/tag/%E6%82%AC%E7%96%91)
+2019-08-24 21:46:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27028847/>
+{'author': '\n                [日]\n            东野圭吾',
+ 'brief': '<div class="intro">\n'
+          '    <p>【内容简介】</p>    '
+          '<p>如果推理小说一定要有死亡，这本书所触及的或许就是最残忍最令人绝望的一种情境。</p>    '
+          '<p>一起事件，一个人的一生因此改变。仿佛跌入蛛网般绝望的挣扎，可这黑暗的尽头在哪里？世界还会有光亮吗？薰子放弃所有，坚持守护的这一切真的像想象的那样吗？</p>    '
+          '<p>我心里的可爱宝贝，却成了別人眼中骇人的怪物。他们说我把瑞穗当成玩具，說我在玩弄一个死去的人。我不懂，瑞穗明明还活着，他们为什么说她死了呢？</p>    '
+          '<p>很多时候，我们以为死亡是一个瞬间，其实死亡是一个过程。绝望的守护，遥远的念想，无尽的挣扎。当希望变成一种绝望，痛苦有如无边的黑暗吞噬人生。挑战人性与道德的界限，对人类心中之爱的终极考验。</p>    '
+          '<p>【编辑推荐】</p>    <p>★《解忧杂货店》之后，东野圭吾又一部慰藉人心之作。</p>    '
+          '<p>既悲伤又温暖，这是一个让我们重新面对人生的故事。</p>    '
+          '<p>★如果推理小说一定要有死亡，这本书所触及的或许就是最残忍最令人绝望的一种情...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 7.2,
+ 'title': '沉睡的人鱼之家',
+ 'url': 'https://book.douban.com/subject/27028847/'}
+2019-08-24 21:46:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2230208/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 21:46:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26388161/> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:46:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/2230208/>
+{'author': '\n                [加拿大]\n            亦舒',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>一个三十几岁的美丽女人子君，在家做全职家庭主妇。却被一个平凡女人夺走丈夫，一段婚姻的失败，让女主角不得不坚强，变得更美丽，有了事业，最终遇见一个更值得爱的男人……</p></div>',
+ 'grade_float': 7.9,
+ 'title': '我的前半生',
+ 'url': 'https://book.douban.com/subject/2230208/'}
+2019-08-24 21:46:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26388161/>
+{'author': None,
+ 'brief': None,
+ 'grade_float': 8.6,
+ 'title': 'MATLAB神经网络43个案例分析',
+ 'url': 'https://book.douban.com/subject/26388161/'}
+2019-08-24 21:46:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27042830/> (referer: https://book.douban.com/tag/%E6%82%AC%E7%96%91)
+2019-08-24 21:46:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3259440/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:46:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27042830/>
+{'author': '博集天卷',
+ 'brief': '<div class="intro">\n'
+          '    <p>▶ 两个孤独少年 × 一位孤勇警探，如父如子的亲情，失而复得的挚爱，触不可及的未来</p>    '
+          '<p>▶全球销量突破3300万册，北欧悬疑小说天王尤•奈斯博《猎豹》之后再创销售奇迹。</p>    '
+          '<p>▶入围英国犯罪小说作家协会国际匕首奖决选，荣登 《纽约时报》《出版人周刊》《洛杉矶时报》畅销榜 。</p>    '
+          '<p>也许生命只教过你一件事，那就是时光无法倒流。</p>    <p></p>    '
+          '<p>哈利自我放逐到香港之后，以为从此远离警探生涯给他造成的创伤。但令人难以置信的事情发生了——曾与哈利情同父子的少年欧雷克，因涉嫌杀人而被警方逮捕。哈利无法相信欧雷克是杀人凶手，因此返回奥斯陆试图找出真凶，挑战一桩在警方看来已经罪证确凿的毒虫命案。</p>    '
+          '<p>为了拯救他誓言守护的少年，在律师汉斯和昔日旧友贝雅特的帮助下，哈利只身展开调查。然而他发现自己面对的是一个让人彻底迷失的处境。如幽灵般神秘飘忽的贩毒组织幕后首脑，渴望权力的政客，收受黑钱的警方……没人...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.5,
+ 'title': '幽灵',
+ 'url': 'https://book.douban.com/subject/27042830/'}
+2019-08-24 21:46:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/3259440/>
+{'author': '\n                [日]\n            东野圭吾',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>“只希望能手牵手在太阳下散步”，这个象征故事内核的绝望念想，有如一个美丽的幌子，随着无数凌乱、压抑、悲凉的故事片段像纪录片一样一一还原：没有痴痴相思，没有海枯石烂，只剩下一个冰冷绝望的诡计，最后一丝温情也被完全抛弃，万千读者在一曲救赎罪恶的凄苦爱情中悲切动容……</p></div>',
+ 'grade_float': 9.1,
+ 'title': '白夜行',
+ 'url': 'https://book.douban.com/subject/3259440/'}
+2019-08-24 21:46:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3742366/> (referer: https://book.douban.com/tag/UCD)
+2019-08-24 21:46:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/3742366/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>《网站内容制胜宝典》主要介绍如何撰写网页内容和如何布局网页元素。《网站内容制胜宝典》为网站内容的创建和修改提供了相应的策略、过程和方法，帮助设计人员对网站内容进行计划、组织、撰写、设计和测试，并提高网页易访问性，从而吸引用户浏览网站。《网站内容制胜宝典》适合网页内容编写人员、网页设计人员等参考。</p></div>',
+ 'grade_float': 8.3,
+ 'title': '胜于言传',
+ 'url': 'https://book.douban.com/subject/3742366/'}
+2019-08-24 21:46:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27070071/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:46:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27070071/>
+{'author': '\n                [日]\n            米泽穗信',
+ 'brief': '<div class="intro">\n'
+          '    <p>“冰菓”系列第六弹——《迟来的翅膀》登场！</p>    <p>长大成人的路上，谁都有必须面对的谜团。</p>    '
+          '<p>神山市即将举行合唱祭，开演前负责独唱的千反田爱瑠却去向不明。折木奉太郎从暑假开始前爱瑠的状态、伊原摩耶花和福部里志的调查与证言、参赛曲目以及某个人的谎言中找到线索，独自前去寻找爱瑠。爱瑠究竟身在何处，她的真正想法又是什么呢？（《迟来的翅膀》）</p>    '
+          '<p>全书分为六个短篇，在充满活力又带点苦涩的故事里，古籍研究社四名成员的过去和未来也逐渐明朗……</p>    '
+          '<p></p></div>',
+ 'grade_float': 8.6,
+ 'title': '迟来的翅膀',
+ 'url': 'https://book.douban.com/subject/27070071/'}
+2019-08-24 21:46:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27066397/> (referer: https://book.douban.com/tag/%E6%97%A5%E6%9C%AC%E6%BC%AB%E7%94%BB)
+2019-08-24 21:46:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27066397/>
+{'author': 'メイドインアビス',
+ 'brief': None,
+ 'grade_float': 8.5,
+ 'title': 'メイドインアビス 5',
+ 'url': 'https://book.douban.com/subject/27066397/'}
+2019-08-24 21:46:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86?start=4320&type=T> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86)
+2019-08-24 21:46:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26971240/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86)
+2019-08-24 21:46:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1499753/> (referer: https://book.douban.com/tag/%E4%BA%A6%E8%88%92)
+2019-08-24 21:46:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26971240/>
+{'author': '尸案调查科系列',
+ 'brief': '<div class="intro">\n'
+          '    <p>本书是一本犯罪推理小说。讲述市公安局刑事技术室的几名技术警察如何运用刑事科学技术侦破重大疑难案件的故事。</p>    '
+          '<p>七个烧脑的谋杀故事，七段黑暗的死亡回忆！</p>    <p>威廉古堡：一家三口惨死豪华别墅浴缸之中……</p>    '
+          '<p>封尘木偶：不明身份的尸块散落于荒山野岭……</p>    <p>花季江湖：人缘很好的留守老人莫名死于小卖店……</p>    '
+          '<p>绝命轮回：夫妻吵架，妻子愤然离开，从此再也没有回来……</p>    '
+          '<p>粉红女郎：“蜜恋“主题青年酒店发现一具50岁中年男人尸体……</p>    '
+          '<p>爱之誓言：房东寡妇潘蓉发现房客死于自己出租的房子里……</p></div>',
+ 'grade_float': 6.9,
+ 'title': '尸案调查科第二季1：罪恶根源',
+ 'url': 'https://book.douban.com/subject/26971240/'}
+2019-08-24 21:48:33 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: doubandushu)
+2019-08-24 21:48:33 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.16299-SP0
+2019-08-24 21:48:33 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'doubandushu', 'LOG_FILE': 'log.txt', 'NEWSPIDER_MODULE': 'doubandushu.spiders', 'SPIDER_MODULES': ['doubandushu.spiders']}
+2019-08-24 21:48:33 [scrapy.extensions.telnet] INFO: Telnet Password: eab14d3726b5cd13
+2019-08-24 21:48:33 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-24 21:48:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['doubandushu.middlewares.DoubandushuDownloadMileware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-24 21:48:34 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-24 21:48:34 [scrapy.middleware] INFO: Enabled item pipelines:
+['doubandushu.pipelines.JsonPipeline', 'doubandushu.pipelines.MongodbPipelins']
+2019-08-24 21:48:34 [scrapy.core.engine] INFO: Spider opened
+2019-08-24 21:48:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-24 21:48:34 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-24 21:48:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all> (referer: None)
+2019-08-24 21:48:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:34 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2019-08-24 21:48:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%BA%A6%E8%88%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%9F%A9%E5%AF%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%98%BF%E5%8A%A0%E8%8E%8E%C2%B7%E5%85%8B%E9%87%8C%E6%96%AF%E8%92%82> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E5%AE%89%E5%A6%AE%E5%AE%9D%E8%B4%9D> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%AD%A6%E4%BE%A0> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%B8%89%E6%AF%9B> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A8%8B%E5%BA%8F> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%82%AC%E7%96%91> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%97%A5%E6%9C%AC%E6%BC%AB%E7%94%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%87%91%E5%BA%B8> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1046385/buylinks> (referer: https://book.douban.com/tag/%E9%9F%A9%E5%AF%92)
+2019-08-24 21:48:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/UCD> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27031877/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:48:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27017794/> (referer: https://book.douban.com/tag/%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:48:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27044048/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:48:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27070071/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:48:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27070071/>
+{'author': '\n                [日]\n            米泽穗信',
+ 'brief': '<div class="intro">\n'
+          '    <p>“冰菓”系列第六弹——《迟来的翅膀》登场！</p>    <p>长大成人的路上，谁都有必须面对的谜团。</p>    '
+          '<p>神山市即将举行合唱祭，开演前负责独唱的千反田爱瑠却去向不明。折木奉太郎从暑假开始前爱瑠的状态、伊原摩耶花和福部里志的调查与证言、参赛曲目以及某个人的谎言中找到线索，独自前去寻找爱瑠。爱瑠究竟身在何处，她的真正想法又是什么呢？（《迟来的翅膀》）</p>    '
+          '<p>全书分为六个短篇，在充满活力又带点苦涩的故事里，古籍研究社四名成员的过去和未来也逐渐明朗……</p>    '
+          '<p></p></div>',
+ 'grade_float': 8.6,
+ 'title': '迟来的翅膀',
+ 'url': 'https://book.douban.com/subject/27070071/'}
+2019-08-24 21:48:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/25728189/> (referer: https://book.douban.com/tag/%E7%A8%8B%E5%BA%8F)
+2019-08-24 21:48:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/25728189/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>《像计算机科学家一样思考python》按照培养读者像计算机科学家一样的思维方式的思路来教授python语言编程。全书贯穿的主体是如何思考、设计、开发的方法，而具体的编程语言，只是提供一个具体场景方便介绍的媒介。《像计算机科学家一样思考python》并不是一本介绍语言的书，而是一本介绍编程思想的书。和其他编程设计语言书籍不同，它不拘泥于语言细节，而是尝试从初学者的角度出发，用生动的示例和丰富的练习来引导读者渐入佳境。</p>    '
+          '<p>作者从最基本的编程概念开始讲起，包括语言的语法和语义，而且每个编程概念都有清晰的定义，引领读者循序渐进地学习变量、表达式、语句、函数和数据结构。此外，书中还探讨了如何处理文件和数据库，如何理解对象、方法和面向对象编程，如何使用调试技巧来修正语法、运行时和语义错误。每一章都配有术语表和练习题，方便读者巩固所学的知识和技巧。此外，每一章都抽出...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.1,
+ 'title': '像计算机科学家一样思考Python',
+ 'url': 'https://book.douban.com/subject/25728189/'}
+2019-08-24 21:48:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27028847/> (referer: https://book.douban.com/tag/%E6%82%AC%E7%96%91)
+2019-08-24 21:48:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30473909/> (referer: https://book.douban.com/tag/%E6%97%A5%E6%9C%AC%E6%BC%AB%E7%94%BB)
+2019-08-24 21:48:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/30473909/>
+{'author': '后浪',
+ 'brief': '<div class="intro">\n'
+          '    <p>动画大师今敏，漫画生涯至高代表作！</p>    '
+          '<p>追悼纪念，遗作重见天日，首度作为单行本出版的蕞后长篇杰作！</p>    <p>完整收录生前被拒绝刊登的「神结局」</p>    '
+          '<p>深具自传色彩，你所能想象的今敏风格之盛宴！</p>    <p>名作《千年女优》《红辣椒》的前身</p>    '
+          '<p>中文世界初次正版引进</p>    <p>...................</p>    <p>📖 编辑推荐</p>    '
+          '<p>是谁，创造了神的世界？</p>    <p>OPUS，是安放今敏导演虚拟灵魂的实体容器。</p>    <p>* * '
+          '*</p>    <p>☆ 动画大师今敏，漫画生涯至高代表作，中文世界首度正版引进！</p>    '
+          '<p>今敏，是继宫崎骏、大友克洋、押井守之后蕞享誉世界的日本动画大师，具有强烈作者色彩、先锋探索精神的艺术家。年仅46岁，却在10年间接连创作出影响世界影坛的重量级动画杰作——《未麻的部屋》《千年女优》《东京教父》《红辣椒》，曾入围威尼斯电影节主竞赛单元、提名奥斯卡蕞佳动画长片、提名动画安妮奖蕞佳导演&amp;蕞佳编剧。</p>    '
+          '<p>2010年8月，今敏...</p><p><a href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 9.1,
+ 'title': 'OPUS 作品',
+ 'url': 'https://book.douban.com/subject/30473909/'}
+2019-08-24 21:48:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27074769/> (referer: https://book.douban.com/tag/%E9%87%91%E5%BA%B8)
+2019-08-24 21:48:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E5%A5%87%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27025051/> (referer: https://book.douban.com/tag/%E9%87%91%E5%BA%B8)
+2019-08-24 21:48:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%A8%80%E6%83%85> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26797723/> (referer: https://book.douban.com/tag/%E6%AD%A6%E4%BE%A0)
+2019-08-24 21:48:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26797723/>
+{'author': '金庸作品集（朗声新修版）',
+ 'brief': None,
+ 'grade_float': 9.3,
+ 'title': '鹿鼎记（新修版）',
+ 'url': 'https://book.douban.com/subject/26797723/'}
+2019-08-24 21:48:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:48:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3118374/buylinks> (referer: https://book.douban.com/tag/UCD)
+2019-08-24 21:48:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/4091981/> (referer: https://book.douban.com/tag/UCD)
+2019-08-24 21:48:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2137632/> (referer: https://book.douban.com/tag/%E4%B8%89%E6%AF%9B)
+2019-08-24 21:48:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26545443/buylinks> (referer: https://book.douban.com/tag/UCD)
+2019-08-24 21:48:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/2137632/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>天堂之鸟2007/05/02 06:20 '
+          'P.M.这是一本薄薄的三毛摄影诗歌集。由成都科技大学出版社出版。买的时候，就惊讶于书名-----《天堂之鸟》,那一定是只无忧无虑、自由自在、可喜又可爱的鸟。事实是，这种欣悦的感觉总不能替代我对三毛英年早逝的惋惜。 '
+          '这本书是根据一九九O年九月二日，三毛在成都游历时的生活情景而成的摄影诗歌集，图片由著名青年摄影家肖全先生拍摄。在三毛那些精致的小诗和美文的后面，都配以一张三毛在成都时的黑白照片，让人很直观地看到三毛生前的种种情态。或开怀一笑，或低头沉思，或恋恋于成都的老茶馆，或僻静的街角聆听喧闹的市声。一个古典情怀、鲜明开朗个性的三毛便跃然纸上。三毛游览成都时，一定也是怀着颗恋恋不舍的心情驻足在老成都的每一条小巷、每一棟旧房子跟前的，然后把自己的影像牢牢地和老成都的老街、老树融合在一起。那次成都之行，三毛只住了两天...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 9.0,
+ 'title': '天堂之鸟',
+ 'url': 'https://book.douban.com/subject/2137632/'}
+2019-08-24 21:48:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3742366/> (referer: https://book.douban.com/tag/UCD)
+2019-08-24 21:48:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/3742366/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>《网站内容制胜宝典》主要介绍如何撰写网页内容和如何布局网页元素。《网站内容制胜宝典》为网站内容的创建和修改提供了相应的策略、过程和方法，帮助设计人员对网站内容进行计划、组织、撰写、设计和测试，并提高网页易访问性，从而吸引用户浏览网站。《网站内容制胜宝典》适合网页内容编写人员、网页设计人员等参考。</p></div>',
+ 'grade_float': 8.3,
+ 'title': '胜于言传',
+ 'url': 'https://book.douban.com/subject/3742366/'}
+2019-08-24 21:48:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1793267/> (referer: https://book.douban.com/tag/UCD)
+2019-08-24 21:48:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/1793267/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>Today many companies are employing a user-centered design '
+          '(UCD) process, but for most companies, usability begins and ends '
+          'with the usability test.  Although usability testing is a critical '
+          'part of an effective user-centered life cycle, it is only one '
+          'component of the UCD process.  This book is focused on the '
+          'requirements gathering stage, which often receives less attention '
+          'tha...</p><p><a href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.3,
+ 'title': 'Understanding Your Users',
+ 'url': 'https://book.douban.com/subject/1793267/'}
+2019-08-24 21:48:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27072051/> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:48:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27072051/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>微笑的猫代表作，十周年纪念版。</p>    <p>泛彼柏舟，在彼中河。髧彼两髦，实维我仪，之死矢靡他。</p>    '
+          '<p>泛柏舟于大河中，顺流而下，逐波踏浪，势不可逆，仿佛如我爱他，毫无贰心，至死不渝。</p>    '
+          '<p>所以不愿意分开，想都别想，一秒钟都不行。</p>    <p>十年了，他们依然在一起。</p>    '
+          '<p>人要面对自我是很困难的，更难的是义无反顾地去喜欢一个人，最难的，是两个人走到了一起，然后在一起十年，二十年……</p>    '
+          '<p>学霸陶可是大学里面的风云人物，深得同学和导师的喜爱。陶可有两个死党安小佳和胖子，他们一起渡过美妙的校园时光，一起逃课，一起读书，不离不弃。导师叶臻虽然表面上对他过于严格要求，实则是最能纵容陶可的人。叶臻在暗处无时无刻不在关注和帮助着陶可，引导陶可勇敢的面对自己，迈出人生重要的一步……</p></div>',
+ 'grade_float': 8.8,
+ 'title': '不疯魔不成活',
+ 'url': 'https://book.douban.com/subject/27072051/'}
+2019-08-24 21:48:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2073245/> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:48:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/2073245/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>This book provides the first comprehensive treatment of '
+          'feed-forward neural networks from the perspective of statistical '
+          'pattern recognition.  After introducing the basic concepts of '
+          'pattern recognition, the book describes techniques for modelling '
+          'probability density functions, and discusses the properties and '
+          'relative merits of the multi-layer perceptron and radial basis '
+          'funct...</p><p><a href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.8,
+ 'title': 'Neural Networks for Pattern Recognition',
+ 'url': 'https://book.douban.com/subject/2073245/'}
+2019-08-24 21:48:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26976497/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 21:48:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26976497/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>这是中国部丝路题材长篇小说的先声之作。作品讲述美丽精灵“小吃货”、哈萨克斯坦陕西村汉族少女雅诗儿及富豪男友组织车队从阿斯塔纳逆丝路一路向东，途径阿拉木图、霍尔果斯、新疆、甘肃、陕西等沿线各明珠城市和景点，一路奇遇、一路历险、一路故事，最终到达西安寻祖，却与西安青年郑能亮不可抑止地相爱，几经波折嫁回中国的故事。作品内容丰富，时尚、清新，具有浓郁的地域气息和时代风貌，是中华文化自信的见证。</p></div>',
+ 'grade_float': 9.1,
+ 'title': '丝路情缘',
+ 'url': 'https://book.douban.com/subject/26976497/'}
+2019-08-24 21:48:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27053309/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 21:48:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27075479/> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:48:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27061120/> (referer: https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:48:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27061120/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>修真故事，讲一个没落门派如何在臭美猴，捣蛋精，刻薄鬼，二百五和小杂毛的手里重振的故事</p></div>',
+ 'grade_float': 8.6,
+ 'title': '六爻',
+ 'url': 'https://book.douban.com/subject/27061120/'}
+2019-08-24 21:48:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26851806/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 21:48:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/21356967/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:48:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/4201552/> (referer: https://book.douban.com/tag/UCD)
+2019-08-24 21:48:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/5312371/> (referer: https://book.douban.com/tag/UCD)
+2019-08-24 21:48:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30230060/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:48:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30246163/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:48:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26924200/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:48:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/30246163/>
+{'author': '默读',
+ 'brief': '<div class="intro">\n'
+          '    <p>童年，成长经历，家庭背景，社会关系，创伤……</p>    '
+          '<p>我们不断追溯与求索犯罪者的动机，探寻其中最幽微的喜怒哀乐，不是为了设身处地地同情、乃至于原谅他们，不是为了给罪行以开脱的理由，不是为了跪服于所谓人性的复杂，更不是为了把自己也异化成怪物——</p>    '
+          '<p>我们只是在给自己、给仍然对这个世界抱有期望的人——寻找一个公正的交代。</p></div>',
+ 'grade_float': 8.6,
+ 'title': '默读.2',
+ 'url': 'https://book.douban.com/subject/30246163/'}
+2019-08-24 21:48:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26924200/>
+{'author': '魔道祖師',
+ 'brief': '<div class="intro">\n'
+          '    <p>隨書附贈精美明信片一張</p>    <p>蓮花塢被滅後，存活下來的兩個少年，</p>    '
+          '<p>一個慘遭化丹，一個則被丟下夷陵的亂葬崗。</p>    <p>可岐山溫氏並沒能繼續猖狂太久，</p>    '
+          '<p>少年之一以江氏家主的身分，</p>    <p>聯合金、聶、藍三家展開了射日之征；</p>    '
+          '<p>而另一名少年，則以魔道之姿回歸，加入復仇的行列。</p>    <p>過去已成回憶，對魏無羨與藍忘機而言，</p>    '
+          '<p>眼下更要緊的，是揭開赤鋒尊死因的真相，</p>    <p>並讓藍氏家主藍曦臣明白金光瑤私底下的陰毒手段。</p>    '
+          '<p>然而與此同時，</p>    <p>在眾人已確定夷陵老祖重歸於世後，</p>    '
+          '<p>第二次的亂葬崗圍剿，恐怕已是迫在眉睫……</p></div>',
+ 'grade_float': 8.0,
+ 'title': '魔道祖師 三',
+ 'url': 'https://book.douban.com/subject/26924200/'}
+2019-08-24 21:48:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30307059/buylinks> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:48:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3022521/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:48:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/34429608/buylinks> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:48:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/33413575/buylinks> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:48:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/3022521/>
+{'author': None,
+ 'brief': None,
+ 'grade_float': 8.0,
+ 'title': '天官赐福',
+ 'url': 'https://book.douban.com/subject/3022521/'}
+2019-08-24 21:49:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30307059/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30181592/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/30307059/>
+{'author': '默读',
+ 'brief': '<div class="intro">\n'
+          '    <p>童年，成长经历，家庭背景，社会关系，创伤……</p>    '
+          '<p>我们不断追溯与求索犯罪者的动机，探寻其中*幽微的喜怒哀乐，不是为了设身处地地同情、乃至于原谅他们，不是为了给罪行以开脱的理由，不是为了跪服于所谓人性的复杂，更不是为了把自己也异化成怪物——</p>    '
+          '<p>我们只是在给自己、给仍然对这个世界抱有期望的人——寻找一个公正的交代。</p></div>',
+ 'grade_float': 8.6,
+ 'title': '默读.3',
+ 'url': 'https://book.douban.com/subject/30307059/'}
+2019-08-24 21:49:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27075484/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/33413575/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30246163/?channel=subject_list&platform=web> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/33413575/>
+{'author': '撒野',
+ 'brief': '<div class="intro">\n'
+          '    <p>我想，左肩有你，右肩微笑。</p>    <p>我想，在你眼里，撒野奔跑，</p>    '
+          '<p>我想，一个眼神，就到老。</p>    '
+          '<p>重点学校的优等生蒋丞被寄养家庭“流放”到亲生父亲所在的钢厂，陌生的环境、粗鄙的父亲、与曾经学校完全不能相提并论的四中都令其感到压抑郁闷。直到某一天，机缘巧合下，蒋丞遇到了“钢厂小霸王”顾飞，至此开始了一段关于“救赎”与“希望”的故事……</p></div>',
+ 'grade_float': 9.4,
+ 'title': '撒野 2',
+ 'url': 'https://book.douban.com/subject/33413575/'}
+2019-08-24 21:49:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26939596/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/30246163/?channel=subject_list&platform=web>
+{'author': '默读',
+ 'brief': '<div class="intro">\n'
+          '    <p>童年，成长经历，家庭背景，社会关系，创伤……</p>    '
+          '<p>我们不断追溯与求索犯罪者的动机，探寻其中最幽微的喜怒哀乐，不是为了设身处地地同情、乃至于原谅他们，不是为了给罪行以开脱的理由，不是为了跪服于所谓人性的复杂，更不是为了把自己也异化成怪物——</p>    '
+          '<p>我们只是在给自己、给仍然对这个世界抱有期望的人——寻找一个公正的交代。</p></div>',
+ 'grade_float': 8.6,
+ 'title': '默读.2',
+ 'url': 'https://book.douban.com/subject/30246163/?channel=subject_list&platform=web'}
+2019-08-24 21:49:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/34429608/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26939596/>
+{'author': None,
+ 'brief': None,
+ 'grade_float': 8.9,
+ 'title': '殺破狼',
+ 'url': 'https://book.douban.com/subject/26939596/'}
+2019-08-24 21:49:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/33374965/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/33374965/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>城市天空，诡云奔涌</p>    '
+          '<p>三年前恭州市的缉毒行动中，因总指挥江停判断失误，现场发生连环爆炸，禁毒支队伤亡惨重。三年后，本应早已因过殉职并尸骨无存的江停，竟奇迹般从植物人状态下醒来了。</p>    '
+          '<p>英魂不得安息，他必须从地狱重返人间，倾其所有来还原血腥离奇的真相。</p></div>',
+ 'grade_float': 8.4,
+ 'title': '破云',
+ 'url': 'https://book.douban.com/subject/33374965/'}
+2019-08-24 21:49:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%85%90%E7%89%A9%E2%99%AA> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%85%90%E5%90%91> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30336340/?channel=subject_list&platform=web> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/30336340/?channel=subject_list&platform=web>
+{'author': '撒野',
+ 'brief': '<div class="intro">\n'
+          '    <p>我想，左肩有你，右肩微笑。</p>    <p>我想，在你眼里，撒野奔跑，</p>    '
+          '<p>我想，一个眼神，就到老。</p>    '
+          '<p>重点学校的优等生蒋丞被寄养家庭“流放”到亲生父亲所在的钢厂，陌生的环境、粗鄙的父亲、与曾经学校完全不能相提并论的四中都令其感到压抑郁闷。直到某一天，机缘巧合下，蒋丞遇到了“钢厂小霸王”顾飞，至此开始了一段关于“救赎”与“希望”的故事……</p></div>',
+ 'grade_float': 9.0,
+ 'title': '撒野',
+ 'url': 'https://book.douban.com/subject/30336340/?channel=subject_list&platform=web'}
+2019-08-24 21:49:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E%E4%B9%8B%E6%81%8B> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%85%90~%E9%A3%98%E8%BF%87> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%85%90> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/BL> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E?start=2200&type=T> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E?start=120&type=T> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E?start=2220&type=T> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/BL%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E?start=140&type=T> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30336340/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/30336340/>
+{'author': '撒野',
+ 'brief': '<div class="intro">\n'
+          '    <p>我想，左肩有你，右肩微笑。</p>    <p>我想，在你眼里，撒野奔跑，</p>    '
+          '<p>我想，一个眼神，就到老。</p>    '
+          '<p>重点学校的优等生蒋丞被寄养家庭“流放”到亲生父亲所在的钢厂，陌生的环境、粗鄙的父亲、与曾经学校完全不能相提并论的四中都令其感到压抑郁闷。直到某一天，机缘巧合下，蒋丞遇到了“钢厂小霸王”顾飞，至此开始了一段关于“救赎”与“希望”的故事……</p></div>',
+ 'grade_float': 9.0,
+ 'title': '撒野',
+ 'url': 'https://book.douban.com/subject/30336340/'}
+2019-08-24 21:49:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E?start=160&type=T> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 21:49:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2210237/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E%E4%B9%8B%E6%81%8B)
+2019-08-24 21:57:33 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: doubandushu)
+2019-08-24 21:57:33 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.16299-SP0
+2019-08-24 21:57:33 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'doubandushu', 'LOG_FILE': 'log.txt', 'NEWSPIDER_MODULE': 'doubandushu.spiders', 'SPIDER_MODULES': ['doubandushu.spiders']}
+2019-08-24 21:57:33 [scrapy.extensions.telnet] INFO: Telnet Password: d5b8fed3b46757ae
+2019-08-24 21:57:33 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-24 21:57:33 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['doubandushu.middlewares.DoubandushuDownloadMileware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-24 21:57:33 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-24 21:57:34 [scrapy.middleware] INFO: Enabled item pipelines:
+['doubandushu.pipelines.JsonPipeline', 'doubandushu.pipelines.MongodbPipelins']
+2019-08-24 21:57:34 [scrapy.core.engine] INFO: Spider opened
+2019-08-24 21:57:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-24 21:57:34 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-24 21:57:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all> (referer: None)
+2019-08-24 21:57:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:41 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2019-08-24 21:57:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%BA%A6%E8%88%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%98%BF%E5%8A%A0%E8%8E%8E%C2%B7%E5%85%8B%E9%87%8C%E6%96%AF%E8%92%82> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%97%A5%E6%9C%AC%E6%BC%AB%E7%94%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%9F%A9%E5%AF%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%AD%A6%E4%BE%A0> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A7%91%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A8%8B%E5%BA%8F> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1499753/> (referer: https://book.douban.com/tag/%E4%BA%A6%E8%88%92)
+2019-08-24 21:57:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1055187/> (referer: https://book.douban.com/tag/%E4%BA%A6%E8%88%92)
+2019-08-24 21:57:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/1055187/>
+{'author': '\n                [加拿大]\n            亦舒',
+ 'brief': '<div class="intro">\n'
+          '    <p>一天早上，丈夫涓生突然提出离婚，一直满足于做一个贤妻良母的子君尤如大梦初醒。</p>    <p></p>    '
+          '<p>在以后的生活中，子君自食其力，不断战胜软弱与自卑，并友誓不再结婚。</p>    <p></p>    '
+          '<p>就在她开始适应离异后的生活并有所成就时，一位成熟的男子打破了她内心的平静……</p>    <p></p></div>',
+ 'grade_float': 8.4,
+ 'title': '我的前半生',
+ 'url': 'https://book.douban.com/subject/1055187/'}
+2019-08-24 21:57:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%B8%89%E6%AF%9B> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%A8%80%E6%83%85> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1046385/buylinks> (referer: https://book.douban.com/tag/%E9%9F%A9%E5%AF%92)
+2019-08-24 21:57:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E5%A5%87%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%82%AC%E7%96%91> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 21:57:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/25929085/> (referer: https://book.douban.com/tag/%E9%98%BF%E5%8A%A0%E8%8E%8E%C2%B7%E5%85%8B%E9%87%8C%E6%96%AF%E8%92%82)
+2019-08-24 21:57:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/25929085/>
+{'author': '\n                [英]\n            阿加莎·克里斯蒂',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>艾莲娜•马歇尔太太是海盗旗旅馆中最令人瞩目的客人。在众多仰慕者中，她很快和英俊的帕特里克•雷德芬如胶似漆。雷德芬太太为此伤心愤怒，马歇尔先生却不动声色。好戏刚刚开幕，艾莲娜却失踪了，直到人们发现她美丽的躯体被遗弃在已经没有阳光的海滩上，脖子上留下了可怕的手印……</p></div>',
+ 'grade_float': 8.1,
+ 'title': '阳光下的罪恶',
+ 'url': 'https://book.douban.com/subject/25929085/'}
+2019-08-24 21:57:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1082319/> (referer: https://book.douban.com/tag/%E6%AD%A6%E4%BE%A0)
+2019-08-24 21:57:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/1082319/>
+{'author': '\n            金庸',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>张无忌的父母张翠山和殷素素因无意中卷入屠龙刀而起的江湖纷争，与金毛狮王谢逊一同被迫流落至极北大洋中的一个荒岛，在那儿生下了他，并叫无忌认谢逊作义父。张无忌过了几年远离尘嚣、无忧无虑的生活，九岁上随父母回归中土，江湖人士为找谢逊报仇或为抢夺谢逊手上的屠龙宝刀，致使无忌一家三口厄运即接踵而至。父母不愿说出谢逊下落，双双自刎身亡，自己又身受玄冥神掌之伤，寒毒深入腑脏，连医术通神的蝶谷医仙胡青牛也无能为力。身遭如此惨痛变故的张无忌竟泰然处之，既不思为父母报仇，对即将到来的死亡也并不恐惧。自十二岁入蝴蝶谷求医至十四岁出谷，他虽然又经历了不少江湖风浪，活得倒也自由自在。十四岁的张无忌护送峨嵋女侠纪晓芙的女儿杨不悔远赴昆仑山寻父杨逍，从此才真正踏入了身不由己的江湖。</p>    '
+          '<p>一路上历尽艰险，先前张无忌曾救治过的许多武林人物竟一一反噬，恩将仇报。张无忌几番以身代，终于保得年...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.8,
+ 'title': '倚天屠龙记（全四册）',
+ 'url': 'https://book.douban.com/subject/1082319/'}
+2019-08-24 21:57:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3926665/> (referer: https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE)
+2019-08-24 21:57:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/20449829/> (referer: https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE)
+2019-08-24 21:57:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27017794/> (referer: https://book.douban.com/tag/%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4)
+2019-08-24 21:57:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/25728189/> (referer: https://book.douban.com/tag/%E7%A8%8B%E5%BA%8F)
+2019-08-24 21:57:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/25728189/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>《像计算机科学家一样思考python》按照培养读者像计算机科学家一样的思维方式的思路来教授python语言编程。全书贯穿的主体是如何思考、设计、开发的方法，而具体的编程语言，只是提供一个具体场景方便介绍的媒介。《像计算机科学家一样思考python》并不是一本介绍语言的书，而是一本介绍编程思想的书。和其他编程设计语言书籍不同，它不拘泥于语言细节，而是尝试从初学者的角度出发，用生动的示例和丰富的练习来引导读者渐入佳境。</p>    '
+          '<p>作者从最基本的编程概念开始讲起，包括语言的语法和语义，而且每个编程概念都有清晰的定义，引领读者循序渐进地学习变量、表达式、语句、函数和数据结构。此外，书中还探讨了如何处理文件和数据库，如何理解对象、方法和面向对象编程，如何使用调试技巧来修正语法、运行时和语义错误。每一章都配有术语表和练习题，方便读者巩固所学的知识和技巧。此外，每一章都抽出...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.1,
+ 'title': '像计算机科学家一样思考Python',
+ 'url': 'https://book.douban.com/subject/25728189/'}
+2019-08-24 21:57:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27037149/> (referer: https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE)
+2019-08-24 21:57:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26797723/> (referer: https://book.douban.com/tag/%E6%AD%A6%E4%BE%A0)
+2019-08-24 21:57:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1897413/buylinks> (referer: https://book.douban.com/tag/%E4%BA%A6%E8%88%92)
+2019-08-24 21:57:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26797723/>
+{'author': '金庸作品集（朗声新修版）',
+ 'brief': None,
+ 'grade_float': 9.3,
+ 'title': '鹿鼎记（新修版）',
+ 'url': 'https://book.douban.com/subject/26797723/'}
+2019-08-24 21:57:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26976497/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 21:57:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26388161/buylinks> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:57:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26976497/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>这是中国部丝路题材长篇小说的先声之作。作品讲述美丽精灵“小吃货”、哈萨克斯坦陕西村汉族少女雅诗儿及富豪男友组织车队从阿斯塔纳逆丝路一路向东，途径阿拉木图、霍尔果斯、新疆、甘肃、陕西等沿线各明珠城市和景点，一路奇遇、一路历险、一路故事，最终到达西安寻祖，却与西安青年郑能亮不可抑止地相爱，几经波折嫁回中国的故事。作品内容丰富，时尚、清新，具有浓郁的地域气息和时代风貌，是中华文化自信的见证。</p></div>',
+ 'grade_float': 9.1,
+ 'title': '丝路情缘',
+ 'url': 'https://book.douban.com/subject/26976497/'}
+2019-08-24 21:57:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2073245/> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:57:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/2073245/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>This book provides the first comprehensive treatment of '
+          'feed-forward neural networks from the perspective of statistical '
+          'pattern recognition.  After introducing the basic concepts of '
+          'pattern recognition, the book describes techniques for modelling '
+          'probability density functions, and discusses the properties and '
+          'relative merits of the multi-layer perceptron and radial basis '
+          'funct...</p><p><a href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.8,
+ 'title': 'Neural Networks for Pattern Recognition',
+ 'url': 'https://book.douban.com/subject/2073245/'}
+2019-08-24 21:57:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/DarrenShan> (referer: https://book.douban.com/tag/%E5%A5%87%E5%B9%BB)
+2019-08-24 21:57:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26388161/> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:57:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26388161/>
+{'author': None,
+ 'brief': None,
+ 'grade_float': 8.6,
+ 'title': 'MATLAB神经网络43个案例分析',
+ 'url': 'https://book.douban.com/subject/26388161/'}
+2019-08-24 21:57:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30774406/> (referer: https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+2019-08-24 21:57:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27053309/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:00:12 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: doubandushu)
+2019-08-24 22:00:12 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.16299-SP0
+2019-08-24 22:00:12 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'doubandushu', 'LOG_FILE': 'log.txt', 'NEWSPIDER_MODULE': 'doubandushu.spiders', 'SPIDER_MODULES': ['doubandushu.spiders']}
+2019-08-24 22:00:12 [scrapy.extensions.telnet] INFO: Telnet Password: 932981ccb012aecb
+2019-08-24 22:00:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-24 22:00:12 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['doubandushu.middlewares.AhipinSpiderMiddleware',
+ 'doubandushu.middlewares.DoubandushuDownloadMileware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-24 22:00:12 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-24 22:00:12 [scrapy.middleware] INFO: Enabled item pipelines:
+['doubandushu.pipelines.JsonPipeline', 'doubandushu.pipelines.MongodbPipelins']
+2019-08-24 22:00:12 [scrapy.core.engine] INFO: Spider opened
+2019-08-24 22:00:12 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-24 22:00:12 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-24 22:00:12 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): dev.kdlapi.com:80
+2019-08-24 22:00:12 [urllib3.connectionpool] DEBUG: http://dev.kdlapi.com:80 "GET /api/getproxy/?orderid=956475957589681&num=1&protocol=1&method=2&an_an=1&an_ha=1&quality=1&format=json&sep=1 HTTP/1.1" 200 None
+2019-08-24 22:00:12 [scrapy.core.scraper] ERROR: Error downloading <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all>
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "D:\python\lib\site-packages\scrapy\core\downloader\middleware.py", line 37, in process_request
+    response = yield method(request=request, spider=spider)
+  File "E:\git kraken\module\doubandushu\doubandushu\middlewares.py", line 55, in process_request
+    self._check_expire()
+  File "E:\git kraken\module\doubandushu\doubandushu\middlewares.py", line 51, in _check_expire
+    self._get_proxyip()
+  File "E:\git kraken\module\doubandushu\doubandushu\middlewares.py", line 43, in _get_proxyip
+    proxy_list = info['data']['proxy_list']
+TypeError: string indices must be integers
+2019-08-24 22:00:12 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-08-24 22:00:12 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/builtins.TypeError': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 8, 24, 14, 0, 12, 989763),
+ 'log_count/DEBUG': 2,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2019, 8, 24, 14, 0, 12, 433486)}
+2019-08-24 22:00:12 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-08-24 22:00:50 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: doubandushu)
+2019-08-24 22:00:50 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.16299-SP0
+2019-08-24 22:00:50 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'doubandushu', 'LOG_FILE': 'log.txt', 'NEWSPIDER_MODULE': 'doubandushu.spiders', 'SPIDER_MODULES': ['doubandushu.spiders']}
+2019-08-24 22:00:51 [scrapy.extensions.telnet] INFO: Telnet Password: 7ad2f36149091139
+2019-08-24 22:00:51 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-24 22:00:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['doubandushu.middlewares.DoubandushuDownloadMileware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-24 22:00:51 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-24 22:00:51 [scrapy.middleware] INFO: Enabled item pipelines:
+['doubandushu.pipelines.JsonPipeline', 'doubandushu.pipelines.MongodbPipelins']
+2019-08-24 22:00:51 [scrapy.core.engine] INFO: Spider opened
+2019-08-24 22:00:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-24 22:00:51 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-08-24 22:00:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all> (referer: None)
+2019-08-24 22:00:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%80%BD%E7%BE%8E> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:52 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET https://book.douban.com/tag/%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4#more> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2019-08-24 22:00:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%B8%89%E6%AF%9B> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E5%A5%87%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%97%A5%E6%9C%AC%E6%BC%AB%E7%94%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A7%91%E5%B9%BB%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%9F%A9%E5%AF%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%BA%A6%E8%88%92> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A8%8B%E5%BA%8F> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%AD%A6%E4%BE%A0> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E7%A7%91%E5%B9%BB> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E9%9D%92%E6%98%A5> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/DarrenShan> (referer: https://book.douban.com/tag/%E5%A5%87%E5%B9%BB)
+2019-08-24 22:00:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/5375614/> (referer: https://book.douban.com/tag/%E4%B8%89%E6%AF%9B)
+2019-08-24 22:00:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2137632/> (referer: https://book.douban.com/tag/%E4%B8%89%E6%AF%9B)
+2019-08-24 22:00:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/5375614/>
+{'author': None,
+ 'brief': None,
+ 'grade_float': 9.6,
+ 'title': '三毛散文全编',
+ 'url': 'https://book.douban.com/subject/5375614/'}
+2019-08-24 22:00:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/2137632/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>天堂之鸟2007/05/02 06:20 '
+          'P.M.这是一本薄薄的三毛摄影诗歌集。由成都科技大学出版社出版。买的时候，就惊讶于书名-----《天堂之鸟》,那一定是只无忧无虑、自由自在、可喜又可爱的鸟。事实是，这种欣悦的感觉总不能替代我对三毛英年早逝的惋惜。 '
+          '这本书是根据一九九O年九月二日，三毛在成都游历时的生活情景而成的摄影诗歌集，图片由著名青年摄影家肖全先生拍摄。在三毛那些精致的小诗和美文的后面，都配以一张三毛在成都时的黑白照片，让人很直观地看到三毛生前的种种情态。或开怀一笑，或低头沉思，或恋恋于成都的老茶馆，或僻静的街角聆听喧闹的市声。一个古典情怀、鲜明开朗个性的三毛便跃然纸上。三毛游览成都时，一定也是怀着颗恋恋不舍的心情驻足在老成都的每一条小巷、每一棟旧房子跟前的，然后把自己的影像牢牢地和老成都的老街、老树融合在一起。那次成都之行，三毛只住了两天...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 9.0,
+ 'title': '天堂之鸟',
+ 'url': 'https://book.douban.com/subject/2137632/'}
+2019-08-24 22:00:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1046385/buylinks> (referer: https://book.douban.com/tag/%E9%9F%A9%E5%AF%92)
+2019-08-24 22:00:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1013801/> (referer: https://book.douban.com/tag/%E4%B8%89%E6%AF%9B)
+2019-08-24 22:00:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/?view=type&icn=index-sorttags-all#more> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/1013801/>
+{'author': '\n            三毛',
+ 'brief': '<div class="intro">\n'
+          '    <p>张爱玲的倾城之恋发生在香港，三毛的倾城之恋在东柏林---</p>    '
+          '<p>“那时的我，是一个美丽的女人，我知道，我笑，便如春花，必能感动人的----任他是谁。”</p>    '
+          '<p>穿越时空，我们分享三毛生命种一段既美丽凄楚又仿若迁世记忆的情愁...</p></div>',
+ 'grade_float': 8.8,
+ 'title': '倾城',
+ 'url': 'https://book.douban.com/subject/1013801/'}
+2019-08-24 22:00:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26797723/> (referer: https://book.douban.com/tag/%E6%AD%A6%E4%BE%A0)
+2019-08-24 22:00:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26797723/>
+{'author': '金庸作品集（朗声新修版）',
+ 'brief': None,
+ 'grade_float': 9.3,
+ 'title': '鹿鼎记（新修版）',
+ 'url': 'https://book.douban.com/subject/26797723/'}
+2019-08-24 22:00:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27075484/> (referer: https://book.douban.com/tag/%E8%80%BD%E7%BE%8E)
+2019-08-24 22:00:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/25728189/> (referer: https://book.douban.com/tag/%E7%A8%8B%E5%BA%8F)
+2019-08-24 22:00:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E6%82%AC%E7%96%91> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/25728189/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>《像计算机科学家一样思考python》按照培养读者像计算机科学家一样的思维方式的思路来教授python语言编程。全书贯穿的主体是如何思考、设计、开发的方法，而具体的编程语言，只是提供一个具体场景方便介绍的媒介。《像计算机科学家一样思考python》并不是一本介绍语言的书，而是一本介绍编程思想的书。和其他编程设计语言书籍不同，它不拘泥于语言细节，而是尝试从初学者的角度出发，用生动的示例和丰富的练习来引导读者渐入佳境。</p>    '
+          '<p>作者从最基本的编程概念开始讲起，包括语言的语法和语义，而且每个编程概念都有清晰的定义，引领读者循序渐进地学习变量、表达式、语句、函数和数据结构。此外，书中还探讨了如何处理文件和数据库，如何理解对象、方法和面向对象编程，如何使用调试技巧来修正语法、运行时和语义错误。每一章都配有术语表和练习题，方便读者巩固所学的知识和技巧。此外，每一章都抽出...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.1,
+ 'title': '像计算机科学家一样思考Python',
+ 'url': 'https://book.douban.com/subject/25728189/'}
+2019-08-24 22:00:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%A8%80%E6%83%85> (referer: https://book.douban.com/tag/?view=type&icn=index-sorttags-all)
+2019-08-24 22:00:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27068338/> (referer: https://book.douban.com/tag/%E7%A7%91%E5%B9%BB)
+2019-08-24 22:00:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1499753/> (referer: https://book.douban.com/tag/%E4%BA%A6%E8%88%92)
+2019-08-24 22:00:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2593121/> (referer: https://book.douban.com/tag/DarrenShan)
+2019-08-24 22:00:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1735341/> (referer: https://book.douban.com/tag/DarrenShan)
+2019-08-24 22:01:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1342280/> (referer: https://book.douban.com/tag/DarrenShan)
+2019-08-24 22:01:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2750664/> (referer: https://book.douban.com/tag/DarrenShan)
+2019-08-24 22:01:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/1342280/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>向達倫和師父鬼不理以及好友伊萊離開了怪奇馬戲團，來到一個陌生的城市。在這兒，達倫和伊萊遇上了一樁血案。命案屍體的血全都被搾乾了！</p>    '
+          '<p>鬼不理每晚都鬼鬼祟祟的外出，達倫和伊萊開始懷疑鬼不理是不是和命案有關？於是開始緊緊跟蹤鬼不理，卻意外發現原來鬼不理在對付更厲害的『某人』！</p>    '
+          '<p>就在耶誕夜裡，正當大家都在慶祝佳節的到來時，在城市街道的下方，達倫和伊萊則將被迫面對一個邪惡的生物，他們是否能夠逃脫？或是注定要死在這地下血道當中？……</p>    '
+          '<p>搶先試閱---&gt;&gt; 向達倫第三集摘錄〈第一章〉</p>    <p>我叫向達倫，是半個吸血鬼。</p>    '
+          '<p>本來我是個人類，但在偷了吸血鬼的蜘蛛之後，我的人生就永遠改變了。鬼不理──也就是那個吸血鬼──不但強迫我成為他的助手，還帶我加入一個充滿奇特人物的馬戲團，叫做怪奇馬戲團。</p>    '
+          '<p>要適應這種生活真的很辛苦，但喝人類的血，是更加的痛苦。我曾經頑強地拒絕了很長一段時間，可...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.6,
+ 'title': '地下血道?向達倫大冒險3',
+ 'url': 'https://book.douban.com/subject/1342280/'}
+2019-08-24 22:01:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3749708/buylinks> (referer: https://book.douban.com/tag/DarrenShan)
+2019-08-24 22:01:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27076521/> (referer: https://book.douban.com/tag/%E9%9D%92%E6%98%A5)
+2019-08-24 22:01:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27063968/> (referer: https://book.douban.com/tag/%E7%A7%91%E5%B9%BB)
+2019-08-24 22:01:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27076521/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>★既然有浪迹天涯的梦想，就要去实现！与其坐在家里羡慕别人去留学，不如收拾行囊自己去“流学”！</p>    '
+          '<p>★他骑着1辆自行车，走过30个省，写下7本日记，拍摄40000多张照片</p>    '
+          '<p>★潜心3年半创作，超萌手绘加妙趣无穷的文字，记录下“流学的一年”</p>    '
+          '<p>★每个尚有热血的年轻人，都能从中找到曾经失落的梦想，燃起重新出发的勇气</p>    <p>•</p>    '
+          '<p>2010年，生活在上海的异乡人白关，辞掉游戏公司的工作，翻出积满灰尘的自行车出发了。</p>    '
+          '<p>在浙江，人生头一次夜宿墓地。在福建，玩得太高兴丢了车，也认识了成为他老婆的那个姑娘。在广东，为国道边的涂鸦增添了些许艺术气息。在海南，好容易捡了个完整的椰子，却把椰汁全洒了。在广西，在天南海北的朋友们一起，在客栈里过了个年……</p>    '
+          '<p>点点滴滴的小事成就了一段非凡的“流学”之路。滚滚车轮走过山川大地，虽说只是在骑行，却也收获了整个世界。</p>    '
+          '<p>•</p>    <p>白关花了不亚于路上的时间、精力...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.4,
+ 'title': '流学的一年',
+ 'url': 'https://book.douban.com/subject/27076521/'}
+2019-08-24 22:01:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27063968/>
+{'author': '幻象文库',
+ 'brief': '<div class="intro">\n'
+          '    <p>殿堂级科幻电影大师雷德利·斯科特沉寂五年，异形系列前传二度归来！</p>    '
+          '<p>奥斯卡影帝法斯宾德再度化身生化人！</p>    <p>同名电影登顶全球票房，国内火爆上映！</p>    '
+          '<p>殖民飞船“契约号”的船员来到银河系尽头的一颗遥远星球，原以为那里是片伊甸处女地，实际上却是一个黑暗的危险世界。当超出想象的威胁来袭时，唯有亡命奔逃，才是*的出路。</p></div>',
+ 'grade_float': 8.0,
+ 'title': '异形：契约',
+ 'url': 'https://book.douban.com/subject/27063968/'}
+2019-08-24 22:01:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3259440/> (referer: https://book.douban.com/tag/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4)
+2019-08-24 22:01:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/3259440/>
+{'author': '\n                [日]\n            东野圭吾',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>“只希望能手牵手在太阳下散步”，这个象征故事内核的绝望念想，有如一个美丽的幌子，随着无数凌乱、压抑、悲凉的故事片段像纪录片一样一一还原：没有痴痴相思，没有海枯石烂，只剩下一个冰冷绝望的诡计，最后一丝温情也被完全抛弃，万千读者在一曲救赎罪恶的凄苦爱情中悲切动容……</p></div>',
+ 'grade_float': 9.1,
+ 'title': '白夜行',
+ 'url': 'https://book.douban.com/subject/3259440/'}
+2019-08-24 22:01:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/1342086/> (referer: https://book.douban.com/tag/DarrenShan)
+2019-08-24 22:01:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/2750661/> (referer: https://book.douban.com/tag/DarrenShan)
+2019-08-24 22:01:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/1342086/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>向達倫從一個普通的學生成了『鬼不理的助手』，跟隨鬼不理先生到處流浪，開始學習吸血鬼世界的一切。但是他很快就厭倦了這樣餐風露宿的日子，更讓向達倫受不了的是他根本沒辦法交朋友，而這一切都是鬼不理害的！</p>    '
+          '<p></p>    '
+          '<p>因此鬼不理帶著向達倫回到怪奇馬戲團，向達倫不但正式成為馬戲團的工作人員，還開始和蛇孩兒、普通男孩山姆等人交上朋友。在融入了馬戲團的生活之後，向達倫開始努力工作，但是為了找尋食物餵食可怕的狼人和小矮人，卻引發了怪奇馬戲團最大的危機……</p>    '
+          '<p></p>    '
+          '<p>更讓向達倫困擾的是，他得拚命抗拒那個讓他厭惡的誘惑，然而那卻是唯一能讓他活下去的東西。他的身體愈來愈衰弱了，使得一切的狀況也逐漸脫離了掌握……</p></div>',
+ 'grade_float': 8.7,
+ 'title': '鬼不理的助手─向達倫大冒險2',
+ 'url': 'https://book.douban.com/subject/1342086/'}
+2019-08-24 22:01:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/4871447/buylinks> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30140824/buylinks> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/27042830/> (referer: https://book.douban.com/tag/%E6%82%AC%E7%96%91)
+2019-08-24 22:01:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/27042830/>
+{'author': '博集天卷',
+ 'brief': '<div class="intro">\n'
+          '    <p>▶ 两个孤独少年 × 一位孤勇警探，如父如子的亲情，失而复得的挚爱，触不可及的未来</p>    '
+          '<p>▶全球销量突破3300万册，北欧悬疑小说天王尤•奈斯博《猎豹》之后再创销售奇迹。</p>    '
+          '<p>▶入围英国犯罪小说作家协会国际匕首奖决选，荣登 《纽约时报》《出版人周刊》《洛杉矶时报》畅销榜 。</p>    '
+          '<p>也许生命只教过你一件事，那就是时光无法倒流。</p>    <p></p>    '
+          '<p>哈利自我放逐到香港之后，以为从此远离警探生涯给他造成的创伤。但令人难以置信的事情发生了——曾与哈利情同父子的少年欧雷克，因涉嫌杀人而被警方逮捕。哈利无法相信欧雷克是杀人凶手，因此返回奥斯陆试图找出真凶，挑战一桩在警方看来已经罪证确凿的毒虫命案。</p>    '
+          '<p>为了拯救他誓言守护的少年，在律师汉斯和昔日旧友贝雅特的帮助下，哈利只身展开调查。然而他发现自己面对的是一个让人彻底迷失的处境。如幽灵般神秘飘忽的贩毒组织幕后首脑，渴望权力的政客，收受黑钱的警方……没人...</p><p><a '
+          'href="javascript:void(0)" class="j '
+          'a_show_full">(展开全部)</a></p></div>',
+ 'grade_float': 8.5,
+ 'title': '幽灵',
+ 'url': 'https://book.douban.com/subject/27042830/'}
+2019-08-24 22:01:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30187394/buylinks> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26976497/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/26976497/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>这是中国部丝路题材长篇小说的先声之作。作品讲述美丽精灵“小吃货”、哈萨克斯坦陕西村汉族少女雅诗儿及富豪男友组织车队从阿斯塔纳逆丝路一路向东，途径阿拉木图、霍尔果斯、新疆、甘肃、陕西等沿线各明珠城市和景点，一路奇遇、一路历险、一路故事，最终到达西安寻祖，却与西安青年郑能亮不可抑止地相爱，几经波折嫁回中国的故事。作品内容丰富，时尚、清新，具有浓郁的地域气息和时代风貌，是中华文化自信的见证。</p></div>',
+ 'grade_float': 9.1,
+ 'title': '丝路情缘',
+ 'url': 'https://book.douban.com/subject/26976497/'}
+2019-08-24 22:01:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3749708/> (referer: https://book.douban.com/tag/DarrenShan)
+2019-08-24 22:01:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/3749708/>
+{'author': '当代欧美畅销儿童小说·国际获奖系列',
+ 'brief': '<div class="intro">\n'
+          '    '
+          '<p>达伦·山和他的师父吸血鬼暮先生踏上了通往吸血鬼世界的危险旅程：逼人的严寒、逡巡的野狼、疯狂的大熊——还有神出鬼没的吸血魔……    '
+          '吸血鬼圣堡中的吸血鬼王子要么恢复达伦的人性，要私把他推向黑暗的深渊——达伦必须接受难以想像的危险测试——是生是死，命运掌握在他自己手中……    '
+          '达伦必须顺利地通过五项可怕的测试，否则就得接受尖桩穿心的残酷命运……    '
+          '邪恶正在吸血鬼圣堡中积聚，在喋血和背叛的噩梦中，或许死亡是一种赐福……    '
+          '但是，等待达伦的竟是另外一种不可叵测的命运……</p></div>',
+ 'grade_float': 8.9,
+ 'title': '吸血侠达伦·山传奇2',
+ 'url': 'https://book.douban.com/subject/3749708/'}
+2019-08-24 22:01:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30140824/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30187394/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30473240/buylinks> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/33446985/buylinks> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/30473240/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3894603/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://book.douban.com/subject/30473240/>
+{'author': None,
+ 'brief': '<div class="intro">\n'
+          '    <p>经年一曲故人戏，你我皆是戏中人。</p>    '
+          '<p>初遇的傅三爷，是为捧人包下半个场子，喜欢翘着个二郎腿，偏过头去和身边人低语的公子哥。在那灯影里的侧脸，透着一种消沉的风流。</p>    '
+          '<p>后来她才看清楚，在那半明半昧的光影里，他坐的是，白骨成堆，守的是，浩浩山河。</p></div>',
+ 'grade_float': 8.7,
+ 'title': '十二年故人戏',
+ 'url': 'https://book.douban.com/subject/30473240/'}
+2019-08-24 22:01:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3879301/buylinks> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:08 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/6732193/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/3879301/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/tag/%E8%A8%80%E6%83%85%E5%B0%8F%E8%AF%B4> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)
+2019-08-24 22:01:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://book.douban.com/subject/26851806/> (referer: https://book.douban.com/tag/%E8%A8%80%E6%83%85)

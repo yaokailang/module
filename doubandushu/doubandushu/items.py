@@ -10,7 +10,7 @@ import scrapy
 
 class DoubandushuItem(scrapy.Item):
     title = scrapy.Field()
-    grade = scrapy.Field()
+    grade_float = scrapy.Field()
     url = scrapy.Field()
     author = scrapy.Field()
     brief = scrapy.Field()

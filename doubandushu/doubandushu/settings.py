@@ -58,7 +58,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    'doubandushu.middlewares.DoubandushuDownloadMileware': 126,
+     'doubandushu.middlewares.DoubandushuDownloadMileware': 126,
      'doubandushu.middlewares.AhipinSpiderMiddleware':125,
 
 }
@@ -72,8 +72,8 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'doubandushu.pipelines.JsonPipeline': 300,
-     'doubandushu.pipelines.MongodbPipelins':300,
+     'doubandushu.pipelines.JsonPipeline': 300,
+     'doubandushu.pipelines.MongodbPipelins':310,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
